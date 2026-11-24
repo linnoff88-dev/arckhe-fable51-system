@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="inema-course" content="fable51">
+  <meta name="ARCKHÉ-course" content="fable51">
   <title>Claude é mais do que o modelo | Fable 5.1 na prática</title>
   <meta name="description" content="Pense no Claude como um modelo de raciocínio dentro de quatro camadas de produto: memória, ferramentas, interface e política. As 28 adições do 5.1 caem nessas camadas.">
 
@@ -12,22 +12,22 @@
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('inema.prefs');
+      var raw = localStorage.getItem('ARCKHÉ.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'inema-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'inema-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['inema-dark'];
+    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--inema-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (obrigatório em toda página) -->
-  <script type="application/json" data-inema-manifest>
+  <script type="application/json" data-ARCKHÉ-manifest>
 {
  "course": "fable51",
  "tracks": [
@@ -231,16 +231,16 @@
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
     /* TOC do módulo é um bloco inline, não uma barra lateral sticky */
-    [data-inema-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
     /* Painel de aparência (classes internas) */
-    .inema-appearance-sec { margin-bottom: .75rem; }
-    .inema-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .inema-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .inema-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .inema-chip:hover { border-color: #FACC15; }
-    .inema-chip[aria-pressed="true"], .inema-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .inema-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .inema-chip[aria-pressed="true"], html:not(.dark) .inema-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHÉ-chip:hover { border-color: #FACC15; }
+    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -258,9 +258,9 @@
             <span class="font-bold text-lg hidden md:inline">Fable 5.1</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://inema.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
@@ -275,11 +275,11 @@
             <span class="sm:hidden">T3</span>
             <span class="hidden sm:inline">Gastar menos</span>
           </a>
-          <button type="button" data-inema-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
             <span>🧭</span><span>Minha jornada</span>
-            <span data-inema-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-inema-appearance-toggle="[data-inema-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Aparência e leitura">
+          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Aparência e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -291,40 +291,40 @@
     </div>
   </nav>
   
-  <div data-inema-appearance class="inema-appearance-pop" role="region" aria-label="Aparência e leitura">
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Tema</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-theme="inema-dark" class="inema-chip">Escuro</button>
-        <button type="button" data-inema-set-theme="claro" class="inema-chip">Claro</button>
-        <button type="button" data-inema-set-theme="sepia" class="inema-chip">Sépia</button>
-        <button type="button" data-inema-set-theme="foco" class="inema-chip">Foco</button>
-        <button type="button" data-inema-set-theme="contraste" class="inema-chip">Contraste</button>
+  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="Aparência e leitura">
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Tema</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
+        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
+        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">Sépia</button>
+        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
+        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Tamanho do texto</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-fontscale="90" class="inema-chip">A-</button>
-        <button type="button" data-inema-set-fontscale="100" class="inema-chip">A</button>
-        <button type="button" data-inema-set-fontscale="115" class="inema-chip">A+</button>
-        <button type="button" data-inema-set-fontscale="130" class="inema-chip">A++</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Fonte</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-font="inter" class="inema-chip">Inter</button>
-        <button type="button" data-inema-set-font="system" class="inema-chip">Sistema</button>
-        <button type="button" data-inema-set-font="leitura" class="inema-chip">Leitura</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Fonte</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
+        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
+        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Entrelinha</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-leading="1.5" class="inema-chip">Compacta</button>
-        <button type="button" data-inema-set-leading="1.7" class="inema-chip">Normal</button>
-        <button type="button" data-inema-set-leading="1.9" class="inema-chip">Ampla</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
+        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
+        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
       </div>
     </div>
   </div>
@@ -348,15 +348,15 @@
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Fundamento</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-inema-meter="modulo:1-2" class="inema-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo">
-        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-inema-meter-frac>0 de 6</span><span data-inema-meter-pct>0%</span></div>
-        <div class="inema-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="inema-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-inema-meter-fill style="width:0%"></div></div>
+      <div data-ARCKHÉ-meter="modulo:1-2" class="ARCKHÉ-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo">
+        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
+        <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-emerald-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 inema-prose" data-inema-module="1-2" data-inema-track="1">
-    <nav aria-label="Tópicos deste módulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-inema-toc>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHÉ-prose" data-ARCKHÉ-module="1-2" data-ARCKHÉ-track="1">
+    <nav aria-label="Tópicos deste módulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHÉ-toc>
       <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste módulo</p>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
         <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>As quatro camadas do produto</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>A memória virou um sistema de arquivos</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Voltar no tempo de duas maneiras</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>As respostas viraram interfaces</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>Descoberta de capacidades, pesquisa e controle</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-emerald-400"><span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Atlas: 18 ficaram, 28 chegaram, 46 no total</span></a></li>
@@ -364,12 +364,12 @@
     </nav>
 
     <!-- TÓPICO 1 -->
-    <section id="topico-1" data-inema-topic="modulo-1-2#topico-1" class="mb-16">
+    <section id="topico-1" data-ARCKHÉ-topic="modulo-1-2#topico-1" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
         <h2 class="text-2xl font-bold">🏗️ As quatro camadas do produto</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p1">O arquivo capturado mostra que a qualidade cotidiana do Claude depende cada vez mais de como o produto <strong class="text-emerald-400">lembra contexto, chama ferramentas e transforma raciocínio em algo utilizável</strong>. Uma forma simples de enxergar isso é em quatro camadas ao redor do modelo.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p1">O arquivo capturado mostra que a qualidade cotidiana do Claude depende cada vez mais de como o produto <strong class="text-emerald-400">lembra contexto, chama ferramentas e transforma raciocínio em algo utilizável</strong>. Uma forma simples de enxergar isso é em quatro camadas ao redor do modelo.</p>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 410" class="w-full h-auto" role="img" aria-label="As quatro camadas de produto ao redor do modelo: política por fora, depois interface, ferramentas e memória, com o modelo no centro"><defs>
@@ -396,45 +396,45 @@
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">🧠</div>
           <h4 class="font-semibold text-emerald-400 mb-2">Memória</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p2">Perfil, preferências, projetos, pessoas. No 5.1 virou um sistema de arquivos com 6 ferramentas e 3 ferramentas de busca em conversas passadas.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p2">Perfil, preferências, projetos, pessoas. No 5.1 virou um sistema de arquivos com 6 ferramentas e 3 ferramentas de busca em conversas passadas.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">🧰</div>
           <h4 class="font-semibold text-emerald-400 mb-2">Ferramentas</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p3">Buscar na web, ler arquivos, procurar skills e plugins, sugerir pesquisa profunda. 46 no total no arquivo capturado.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p3">Buscar na web, ler arquivos, procurar skills e plugins, sugerir pesquisa profunda. 46 no total no arquivo capturado.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">🖼️</div>
           <h4 class="font-semibold text-emerald-400 mb-2">Interface</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p4">13 ferramentas visuais novas: gráfico, comparação, quiz, roteiro de viagem, tradução, widget personalizado.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p4">13 ferramentas visuais novas: gráfico, comparação, quiz, roteiro de viagem, tradução, widget personalizado.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">⚖️</div>
           <h4 class="font-semibold text-emerald-400 mb-2">Política</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p5">Categorias que a memória nunca guarda, limite de citação, checklist antes de gerar visual, regras de tom.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p5">Categorias que a memória nunca guarda, limite de citação, checklist antes de gerar visual, regras de tom.</p>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Exercício mental</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p6">Da próxima vez que o Claude fizer algo que surpreenda você, tente localizar em qual camada aconteceu. "Ele lembrou do meu projeto" é memória. "Ele me devolveu um gráfico" é interface. "Ele se recusou a guardar meu dado de saúde" é política.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p6">Da próxima vez que o Claude fizer algo que surpreenda você, tente localizar em qual camada aconteceu. "Ele lembrou do meu projeto" é memória. "Ele me devolveu um gráfico" é interface. "Ele se recusou a guardar meu dado de saúde" é política.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 2 -->
-    <section id="topico-2" data-inema-topic="modulo-1-2#topico-2" class="mb-16">
+    <section id="topico-2" data-ARCKHÉ-topic="modulo-1-2#topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold">🗂️ A memória virou um sistema de arquivos</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p7">A maior parte das palavras adicionadas explica como o Claude lembra. O arquivo capturado declara <strong class="text-emerald-400">seis ferramentas de memória</strong> que funcionam como um pequeno fluxo de documentos:</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p7">A maior parte das palavras adicionadas explica como o Claude lembra. O arquivo capturado declara <strong class="text-emerald-400">seis ferramentas de memória</strong> que funcionam como um pequeno fluxo de documentos:</p>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
@@ -446,7 +446,7 @@
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">📁</span> Por que arquivos importam</h3>
-        <p class="text-neutral-300 mb-4" data-inema-block="m1-2-p8">Memória curada é contexto compacto. Perfil, preferências, pessoas, áreas e notas de projeto podem ficar como arquivos reutilizáveis (por exemplo <code>profile.md</code>, <code>preferences.md</code>, <code>projects/...</code>, <code>people/...</code>). O prompt capturado também define o comportamento de <strong>ler antes de escrever</strong>, fazer edições exatas e checar a versão antes de apagar.</p>
+        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m1-2-p8">Memória curada é contexto compacto. Perfil, preferências, pessoas, áreas e notas de projeto podem ficar como arquivos reutilizáveis (por exemplo <code>profile.md</code>, <code>preferences.md</code>, <code>projects/...</code>, <code>people/...</code>). O prompt capturado também define o comportamento de <strong>ler antes de escrever</strong>, fazer edições exatas e checar a versão antes de apagar.</p>
         
       </div>
 
@@ -482,24 +482,24 @@
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Atenção: fato guardado precisa "ganhar o lugar"</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p9">O prompt capturado diz que um fato armazenado só entra na resposta se mudar a substância do que o Claude conclui ou recomenda. Usar memória só para mostrar que lembra é tratado como vigilância, não como atenção. Isso muda como você deve testar a memória (Trilha 2).</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p9">O prompt capturado diz que um fato armazenado só entra na resposta se mudar a substância do que o Claude conclui ou recomenda. Usar memória só para mostrar que lembra é tratado como vigilância, não como atenção. Isso muda como você deve testar a memória (Trilha 2).</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 3 -->
-    <section id="topico-3" data-inema-topic="modulo-1-2#topico-3" class="mb-16">
+    <section id="topico-3" data-ARCKHÉ-topic="modulo-1-2#topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
         <h2 class="text-2xl font-bold">⏪ Voltar no tempo de duas maneiras</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p10">Arquivos de memória guardam um resumo compacto. As três ferramentas de conversas passadas recuperam o <strong class="text-emerald-400">registro original</strong>. Cada uma resolve um problema diferente.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p10">Arquivos de memória guardam um resumo compacto. As três ferramentas de conversas passadas recuperam o <strong class="text-emerald-400">registro original</strong>. Cada uma resolve um problema diferente.</p>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Memória curada à esquerda, recuperação de conversas à direita"><defs>
@@ -519,30 +519,30 @@
 
       <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-emerald-400 mb-4 flex items-center"><span class="mr-2">👂</span> Como o Claude decide buscar</h3>
-        <p class="text-neutral-300 mb-4" data-inema-block="m1-2-p11">O prompt capturado ensina a reconhecer pistas linguísticas: possessivos sem contexto ("minha dissertação"), artigos definidos que assumem referência compartilhada ("o script", "aquela estratégia"), verbos no passado sobre trocas anteriores ("você recomendou", "decidimos") e pedidos diretos ("continua de onde paramos"). Quando a pessoa escreve como se o Claude já soubesse algo que não está na conversa, ele deve buscar antes de responder.</p>
+        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m1-2-p11">O prompt capturado ensina a reconhecer pistas linguísticas: possessivos sem contexto ("minha dissertação"), artigos definidos que assumem referência compartilhada ("o script", "aquela estratégia"), verbos no passado sobre trocas anteriores ("você recomendou", "decidimos") e pedidos diretos ("continua de onde paramos"). Quando a pessoa escreve como se o Claude já soubesse algo que não está na conversa, ele deve buscar antes de responder.</p>
         <ul class="space-y-2 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">&#8226;</span><span>Regra explícita: nunca dizer "não vejo conversa anterior sobre isso" sem ter buscado.</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">&#8226;</span><span>A busca é por palavras de conteúdo ("robôs chineses"), não por meta-palavras ("discutimos ontem").</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400 mt-1">&#8226;</span><span>Se você está dentro de um projeto, só as conversas daquele projeto são pesquisáveis; fora, só as conversas fora de projeto.</span></li></ul>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> O que isso muda no seu uso</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p12">Você pode parar de colar o contexto inteiro toda vez. Escreva como escreveria para um colega que estava na reunião: "aquela decisão sobre o fornecedor" já é pista suficiente para a busca. Se ele não achar, pede que você especifique.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p12">Você pode parar de colar o contexto inteiro toda vez. Escreva como escreveria para um colega que estava na reunião: "aquela decisão sobre o fornecedor" já é pista suficiente para a busca. Se ele não achar, pede que você especifique.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 4 -->
-    <section id="topico-4" data-inema-topic="modulo-1-2#topico-4" class="mb-16">
+    <section id="topico-4" data-ARCKHÉ-topic="modulo-1-2#topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
         <h2 class="text-2xl font-bold">🖼️ As respostas viraram interfaces</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p13">Treze adições permitem que o Claude devolva uma <strong class="text-emerald-400">interface estruturada</strong> como resposta. Os nomes terminam em <code>_display_v0</code> e cada um cobre um tipo de conteúdo:</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p13">Treze adições permitem que o Claude devolva uma <strong class="text-emerald-400">interface estruturada</strong> como resposta. Os nomes terminam em <code>_display_v0</code> e cada um cobre um tipo de conteúdo:</p>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 290" class="w-full h-auto" role="img" aria-label="Grade com os nomes das treze ferramentas de resposta visual"><defs>
@@ -588,21 +588,21 @@
         <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-emerald-400">O que olhar:</strong> Para no primeiro passo que casa. Se você não usou palavras de intenção visual ("mostra", "gráfico", "desenha") e a resposta cabe em prosa, o Claude responde em prosa.</figcaption>
       </figure>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 5 -->
-    <section id="topico-5" data-inema-topic="modulo-1-2#topico-5" class="mb-16">
+    <section id="topico-5" data-ARCKHÉ-topic="modulo-1-2#topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
         <h2 class="text-2xl font-bold">🔌 Descoberta de capacidades, pesquisa e controle</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p14">Seis ferramentas restantes revelam escolhas de produto. Quatro cuidam de <strong class="text-emerald-400">descoberta de capacidades</strong>: quando uma tarefa trava, o Claude pesquisa o catálogo de plugins ou de skills do usuário e oferece uma opção.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p14">Seis ferramentas restantes revelam escolhas de produto. Quatro cuidam de <strong class="text-emerald-400">descoberta de capacidades</strong>: quando uma tarefa trava, o Claude pesquisa o catálogo de plugins ou de skills do usuário e oferece uma opção.</p>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="Fluxo ilustrativo de descoberta de capacidade: tarefa trava, catálogo é pesquisado, uma opção é oferecida, o usuário decide"><defs>
@@ -635,42 +635,42 @@
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">🔎</div>
           <h4 class="font-semibold text-emerald-400 mb-2">suggest_research</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p15">Quando uma investigação com várias fontes ajudaria, o Claude explica o valor em uma linha e mostra uma ação opcional. Você decide se a pesquisa roda.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p15">Quando uma investigação com várias fontes ajudaria, o Claude explica o valor em uma linha e mostra uma ação opcional. Você decide se a pesquisa roda.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">🛑</div>
           <h4 class="font-semibold text-emerald-400 mb-2">end_conversation</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p16">Um botão de parada estreito, restrito a situações específicas de segurança, com aviso prévio e segunda chamada para confirmar. Não é saída para perguntas difíceis.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p16">Um botão de parada estreito, restrito a situações específicas de segurança, com aviso prévio e segunda chamada para confirmar. Não é saída para perguntas difíceis.</p>
         </div>
         <div class="bg-dark-800 rounded-xl border border-dark-600 p-5">
           <div class="text-2xl mb-2">🧩</div>
           <h4 class="font-semibold text-emerald-400 mb-2">Skills obrigatórias</h4>
-          <p class="text-neutral-300 text-sm" data-inema-block="m1-2-p17">O prompt capturado exige ler o arquivo de instruções da skill antes de gerar qualquer arquivo (documento, planilha, PDF). Pular isso baixa a qualidade.</p>
+          <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m1-2-p17">O prompt capturado exige ler o arquivo de instruções da skill antes de gerar qualquer arquivo (documento, planilha, PDF). Pular isso baixa a qualidade.</p>
         </div>
       </div>
 
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-emerald-500/30 p-5 mb-6">
         <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3">Novo aqui? Termos deste tópico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">Skill</dt><dd class="text-neutral-400" data-inema-block="m1-2-p18">Uma pasta de instruções e boas práticas para um tipo de tarefa (fazer um .docx, ler um PDF). O modelo lê antes de agir.</dd></div><div><dt class="font-semibold text-neutral-100">Plugin</dt><dd class="text-neutral-400" data-inema-block="m1-2-p19">Um pacote instalável que adiciona ferramentas ou skills ao seu Claude.</dd></div><div><dt class="font-semibold text-neutral-100">MCP</dt><dd class="text-neutral-400" data-inema-block="m1-2-p20">Protocolo que conecta o Claude a serviços externos (seu calendário, seu Drive, uma ferramenta de diagramas). Cada conexão traz ferramentas novas.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">Skill</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p18">Uma pasta de instruções e boas práticas para um tipo de tarefa (fazer um .docx, ler um PDF). O modelo lê antes de agir.</dd></div><div><dt class="font-semibold text-neutral-100">Plugin</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p19">Um pacote instalável que adiciona ferramentas ou skills ao seu Claude.</dd></div><div><dt class="font-semibold text-neutral-100">MCP</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m1-2-p20">Protocolo que conecta o Claude a serviços externos (seu calendário, seu Drive, uma ferramenta de diagramas). Cada conexão traz ferramentas novas.</dd></div>
         </dl>
       </aside>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 6 -->
-    <section id="topico-6" data-inema-topic="modulo-1-2#topico-6" class="mb-16">
+    <section id="topico-6" data-ARCKHÉ-topic="modulo-1-2#topico-6" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
         <h2 class="text-2xl font-bold">🗺️ Atlas: 18 ficaram, 28 chegaram, 46 no total</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m1-2-p21">Todas as 18 definições do Fable 5 continuam presentes no arquivo capturado do Fable 5.1. As <strong class="text-emerald-400">28 adições</strong> se organizam em seis grupos, pelo trabalho que fazem:</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m1-2-p21">Todas as 18 definições do Fable 5 continuam presentes no arquivo capturado do Fable 5.1. As <strong class="text-emerald-400">28 adições</strong> se organizam em seis grupos, pelo trabalho que fazem:</p>
 
       <figure class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 452" class="w-full h-auto" role="img" aria-label="As 28 ferramentas adicionadas, agrupadas em seis funções"><defs>
@@ -719,14 +719,14 @@
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Unidade contada e disponibilidade</h3>
-        <p class="text-neutral-300" data-inema-block="m1-2-p22">A unidade é "função declarada única nos blocos de definições capturadas". A disponibilidade real varia por superfície do Claude (web, mobile, Claude Code), configurações e conta. Ver uma definição no arquivo não garante que ela apareça no seu plano.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m1-2-p22">A unidade é "função declarada única nos blocos de definições capturadas". A disponibilidade real varia por superfície do Claude (web, mobile, Claude Code), configurações e conta. Ver uma definição no arquivo não garante que ela apareça no seu plano.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
@@ -781,8 +781,8 @@
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
       <p>Fable 5.1 na prática · Trilha 1 — O que mudou · 2026 ·
-        <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> -
-        <a href="https://inema.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
+        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
       <p class="text-xs">Fonte do prompt de sistema: <a href="https://platform.claude.com/docs/en/release-notes/system-prompts/claude-fable-5-1" target="_blank" class="text-sky-400 hover:text-sky-300">prompt oficial publicado pela Anthropic</a> ·
         <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC" target="_blank" class="text-sky-400 hover:text-sky-300">extração pública do runtime completo</a> (não autenticada; congelada em 02/09/2026).</p>
     </div>
@@ -813,7 +813,7 @@
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.INEMA && INEMA.setPref) { try { INEMA.setPref('theme', dark ? 'inema-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
@@ -838,7 +838,7 @@
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }
+    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
   </script>
 </body>
 </html>

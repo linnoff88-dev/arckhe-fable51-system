@@ -57,7 +57,7 @@ Fable 5.1 **pontua mais alto** e o **sistema ao redor cresceu muito**. Nenhuma f
 
 - **Nome sugerido:** *Fable 5.1 na prática — o que mudou, como usar, como gastar menos*
 - **Formato:** curso simples e direto, 3 trilhas curtas, cada módulo = 1 ideia + 1 exercício + 1 quiz de 3 perguntas. Total estimado: **90 a 120 min**.
-- **Público primário (decisão):** assinante do **Claude.ai / Claude Code** (público INEMA, leigo 40+). Desenvolvedor de API entra como **módulo opcional** no fim da Trilha 3. Motivo: servir os dois por igual deixa de ser "simples e direto".
+- **Público primário (decisão):** assinante do **Claude.ai / Claude Code** (público ARCKHÉ, leigo 40+). Desenvolvedor de API entra como **módulo opcional** no fim da Trilha 3. Motivo: servir os dois por igual deixa de ser "simples e direto".
 - **Avaliação:** o curso é a própria avaliação: cada trilha fecha com um teste prático que a pessoa roda na conta dela e registra o resultado (os 5 testes do Field Guide).
 - **Moldura obrigatória em todo módulo:** "fonte oficial" vs "dump não oficial"; "modelo" vs "produto ao redor".
 
@@ -151,4 +151,4 @@ fable51-system/
 
 - **Disponibilidade:** o aluno pode não ver as 13 ferramentas visuais no plano dele. O módulo 2.3 precisa dizer "se não aparecer, registre isso; é dado, não falha".
 - **Números de custo** vêm de rodadas da Anthropic com Fable 5 (não 5.1). Dizer isso. Cache a $0,25 é novidade 5.1.
-- **Formato do curso:** as skills `formato-curso-v5` (público 40+ leigo, INEMA.PRO) e `formato-curso-v2` (dark âmbar + camada de aprendizagem) só rodam por invocação direta. Precisa escolher antes de construir.
+- **Formato do curso:** as skills `formato-curso-v5` (público 40+ leigo, ARCKHÉ.PRO) e `formato-curso-v2` (dark âmbar + camada de aprendizagem) só rodam por invocação direta. Precisa escolher antes de construir.

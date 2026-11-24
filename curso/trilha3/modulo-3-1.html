@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="inema-course" content="fable51">
+  <meta name="ARCKHÉ-course" content="fable51">
   <title>Preço por token contra preço por tarefa | Fable 5.1 na prática</title>
   <meta name="description" content="Por token, o Fable 5.1 é o modelo mais caro da família. A economia só existe medida em custo por tarefa concluída: menos turnos, menos retrabalho, esforço calibrado. E há casos em que o modelo mais barato vence.">
 
@@ -12,22 +12,22 @@
 (function () {
   try {
     var html = document.documentElement;
-    var DEF = { theme: 'inema-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+    var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
     function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
     var p = clone(DEF);
     try {
-      var raw = localStorage.getItem('inema.prefs');
+      var raw = localStorage.getItem('ARCKHÉ.prefs');
       if (raw) { var parsed = JSON.parse(raw); if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; } }
-      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'inema-dark'; }
+      else { var legacy = localStorage.getItem('theme'); if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark'; }
     } catch (e) { p = clone(DEF); }
-    var THEMES = { 'inema-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
-    var t = THEMES[p.theme] || THEMES['inema-dark'];
+    var THEMES = { 'ARCKHÉ-dark': { dark: true, attr: null, cs: 'dark' }, 'claro': { dark: false, attr: null, cs: 'light' }, 'sepia': { dark: false, attr: 'sepia', cs: 'light' }, 'foco': { dark: null, attr: 'foco', cs: null }, 'contraste': { dark: true, attr: 'contraste', cs: 'dark' } };
+    var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
     if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
     if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
     html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
     html.setAttribute('data-font', p.font || 'inter'); html.setAttribute('data-accent', p.accent || 'emerald');
     var s = html.style; var scale = (+p.fontScale || 100);
-    s.setProperty('--inema-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
+    s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString()); s.setProperty('font-size', scale + '%');
     s.setProperty('--measure', (+p.lineWidth || 68) + 'ch'); s.setProperty('--lh-body', (+p.leading || 1.7).toString());
     var fam = p.font === 'system' ? 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif' : (p.font === 'leitura' ? '"Atkinson Hyperlegible", "Inter", system-ui, sans-serif' : '"Inter", system-ui, sans-serif');
     s.setProperty('--font-body', fam);
@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (obrigatório em toda página) -->
-  <script type="application/json" data-inema-manifest>
+  <script type="application/json" data-ARCKHÉ-manifest>
 {
  "course": "fable51",
  "tracks": [
@@ -231,16 +231,16 @@
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
     /* TOC do módulo é um bloco inline, não uma barra lateral sticky */
-    [data-inema-toc] { position: static !important; top: auto !important; max-height: none !important; }
+    [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
     /* Painel de aparência (classes internas) */
-    .inema-appearance-sec { margin-bottom: .75rem; }
-    .inema-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
-    .inema-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .inema-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
-    .inema-chip:hover { border-color: #FACC15; }
-    .inema-chip[aria-pressed="true"], .inema-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
-    html:not(.dark) .inema-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
-    html:not(.dark) .inema-chip[aria-pressed="true"], html:not(.dark) .inema-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
+    .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
+    .ARCKHÉ-appearance-label { font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; margin-bottom: .35rem; }
+    .ARCKHÉ-appearance-row { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ARCKHÉ-chip { font-size: .8rem; padding: .3rem .65rem; border-radius: .5rem; border: 1px solid #374151; background: rgba(31,41,55,.6); color: #e5e7eb; cursor: pointer; }
+    .ARCKHÉ-chip:hover { border-color: #FACC15; }
+    .ARCKHÉ-chip[aria-pressed="true"], .ARCKHÉ-chip.is-active { background: rgba(250,204,21,.15); border-color: #FACC15; color: #FACC15; }
+    html:not(.dark) .ARCKHÉ-chip { background: #f3f4f6; color: #111827; border-color: #d1d5db; }
+    html:not(.dark) .ARCKHÉ-chip[aria-pressed="true"], html:not(.dark) .ARCKHÉ-chip.is-active { background: rgba(161,98,7,.1); border-color: #a16207; color: #a16207; }
     /* Code box */
     .codebox pre { white-space: pre-wrap; word-break: break-word; }
     
@@ -258,9 +258,9 @@
             <span class="font-bold text-lg hidden md:inline">Fable 5.1</span>
           </a>
           <span class="text-neutral-600">|</span>
-          <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">INEMA.CLUB</a>
+          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
           <span class="text-neutral-600 hidden sm:inline">-</span>
-          <a href="https://inema.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
+          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300 hover:opacity-80 text-sm font-medium hidden sm:inline">PRO</a>
         </div>
         <div class="flex items-center space-x-1 sm:space-x-2">
           <a href="../../curso/trilha1/index.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -275,11 +275,11 @@
             <span class="sm:hidden">T3</span>
             <span class="hidden sm:inline">Gastar menos</span>
           </a>
-          <button type="button" data-inema-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
+          <button type="button" data-ARCKHÉ-journey-open class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 transition-colors">
             <span>🧭</span><span>Minha jornada</span>
-            <span data-inema-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
+            <span data-ARCKHÉ-journey-badge class="text-xs px-1.5 py-0.5 rounded-full bg-primary/20"></span>
           </button>
-          <button type="button" data-inema-appearance-toggle="[data-inema-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Aparência e leitura">
+          <button type="button" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" aria-expanded="false" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Aparência e leitura">
             <span aria-hidden="true">Aa</span>
           </button>
           <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors" title="Tema claro/escuro">
@@ -291,40 +291,40 @@
     </div>
   </nav>
   
-  <div data-inema-appearance class="inema-appearance-pop" role="region" aria-label="Aparência e leitura">
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Tema</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-theme="inema-dark" class="inema-chip">Escuro</button>
-        <button type="button" data-inema-set-theme="claro" class="inema-chip">Claro</button>
-        <button type="button" data-inema-set-theme="sepia" class="inema-chip">Sépia</button>
-        <button type="button" data-inema-set-theme="foco" class="inema-chip">Foco</button>
-        <button type="button" data-inema-set-theme="contraste" class="inema-chip">Contraste</button>
+  <div data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop" role="region" aria-label="Aparência e leitura">
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Tema</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark" class="ARCKHÉ-chip">Escuro</button>
+        <button type="button" data-ARCKHÉ-set-theme="claro" class="ARCKHÉ-chip">Claro</button>
+        <button type="button" data-ARCKHÉ-set-theme="sepia" class="ARCKHÉ-chip">Sépia</button>
+        <button type="button" data-ARCKHÉ-set-theme="foco" class="ARCKHÉ-chip">Foco</button>
+        <button type="button" data-ARCKHÉ-set-theme="contraste" class="ARCKHÉ-chip">Contraste</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Tamanho do texto</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-fontscale="90" class="inema-chip">A-</button>
-        <button type="button" data-inema-set-fontscale="100" class="inema-chip">A</button>
-        <button type="button" data-inema-set-fontscale="115" class="inema-chip">A+</button>
-        <button type="button" data-inema-set-fontscale="130" class="inema-chip">A++</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Tamanho do texto</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-fontscale="90" class="ARCKHÉ-chip">A-</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="100" class="ARCKHÉ-chip">A</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="115" class="ARCKHÉ-chip">A+</button>
+        <button type="button" data-ARCKHÉ-set-fontscale="130" class="ARCKHÉ-chip">A++</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Fonte</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-font="inter" class="inema-chip">Inter</button>
-        <button type="button" data-inema-set-font="system" class="inema-chip">Sistema</button>
-        <button type="button" data-inema-set-font="leitura" class="inema-chip">Leitura</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Fonte</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-font="inter" class="ARCKHÉ-chip">Inter</button>
+        <button type="button" data-ARCKHÉ-set-font="system" class="ARCKHÉ-chip">Sistema</button>
+        <button type="button" data-ARCKHÉ-set-font="leitura" class="ARCKHÉ-chip">Leitura</button>
       </div>
     </div>
-    <div class="inema-appearance-sec">
-      <p class="inema-appearance-label">Entrelinha</p>
-      <div class="inema-appearance-row">
-        <button type="button" data-inema-set-leading="1.5" class="inema-chip">Compacta</button>
-        <button type="button" data-inema-set-leading="1.7" class="inema-chip">Normal</button>
-        <button type="button" data-inema-set-leading="1.9" class="inema-chip">Ampla</button>
+    <div class="ARCKHÉ-appearance-sec">
+      <p class="ARCKHÉ-appearance-label">Entrelinha</p>
+      <div class="ARCKHÉ-appearance-row">
+        <button type="button" data-ARCKHÉ-set-leading="1.5" class="ARCKHÉ-chip">Compacta</button>
+        <button type="button" data-ARCKHÉ-set-leading="1.7" class="ARCKHÉ-chip">Normal</button>
+        <button type="button" data-ARCKHÉ-set-leading="1.9" class="ARCKHÉ-chip">Ampla</button>
       </div>
     </div>
   </div>
@@ -348,15 +348,15 @@
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">45</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Básico</div><div class="text-xs text-neutral-400">Nível</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Fundamento</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-inema-meter="modulo:3-1" class="inema-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo">
-        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-inema-meter-frac>0 de 6</span><span data-inema-meter-pct>0%</span></div>
-        <div class="inema-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="inema-bar__fill h-full bg-purple-500 rounded-full transition-all" data-inema-meter-fill style="width:0%"></div></div>
+      <div data-ARCKHÉ-meter="modulo:3-1" class="ARCKHÉ-meter max-w-md mt-6" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do módulo">
+        <div class="flex justify-between text-sm text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
+        <div class="ARCKHÉ-bar h-2 bg-dark-700 rounded-full overflow-hidden"><div class="ARCKHÉ-bar__fill h-full bg-purple-500 rounded-full transition-all" data-ARCKHÉ-meter-fill style="width:0%"></div></div>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 inema-prose" data-inema-module="3-1" data-inema-track="3">
-    <nav aria-label="Tópicos deste módulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-inema-toc>
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ARCKHÉ-prose" data-ARCKHÉ-module="3-1" data-ARCKHÉ-track="3">
+    <nav aria-label="Tópicos deste módulo" class="mb-12 bg-dark-800 rounded-xl border border-dark-600 p-5" data-ARCKHÉ-toc>
       <p class="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-3">Neste módulo</p>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
         <li><a href="#topico-1" class="flex items-start gap-2 text-neutral-300 hover:text-purple-400"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span><span>A tabela de preços</span></a></li><li><a href="#topico-2" class="flex items-start gap-2 text-neutral-300 hover:text-purple-400"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span><span>Por que "por token" engana</span></a></li><li><a href="#topico-3" class="flex items-start gap-2 text-neutral-300 hover:text-purple-400"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span><span>Quando o Fable em esforço baixo vence o barato</span></a></li><li><a href="#topico-4" class="flex items-start gap-2 text-neutral-300 hover:text-purple-400"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">4</span><span>A economia do assinante: parar de repetir</span></a></li><li><a href="#topico-5" class="flex items-start gap-2 text-neutral-300 hover:text-purple-400"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">5</span><span>Exercício: três tarefas suas, dois modelos</span></a></li><li><a href="#topico-6" class="flex items-start gap-2 text-neutral-300 hover:text-purple-400"><span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">6</span><span>Onde o mais barato ganha</span></a></li>
@@ -364,7 +364,7 @@
     </nav>
 
     <!-- TÓPICO 1 -->
-    <section id="topico-1" data-inema-topic="modulo-3-1#topico-1" class="mb-16">
+    <section id="topico-1" data-ARCKHÉ-topic="modulo-3-1#topico-1" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
         <h2 class="text-2xl font-bold">💵 A tabela de preços</h2>
@@ -373,7 +373,7 @@
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-purple-500/30 p-5 mb-6">
         <p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Novo aqui? Termos deste tópico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">Token</dt><dd class="text-neutral-400" data-inema-block="m3-1-p1">Pedaço de texto que o modelo lê ou escreve, cerca de 3 a 4 caracteres em português. Mil tokens são umas 700 palavras.</dd></div><div><dt class="font-semibold text-neutral-100">Entrada (input)</dt><dd class="text-neutral-400" data-inema-block="m3-1-p2">Tudo que vai para o modelo: prompt de sistema, sua mensagem, o histórico, documentos, resultados de ferramentas.</dd></div><div><dt class="font-semibold text-neutral-100">Saída (output)</dt><dd class="text-neutral-400" data-inema-block="m3-1-p3">O que o modelo escreve, incluindo o raciocínio interno, que é cobrado mesmo quando não aparece.</dd></div><div><dt class="font-semibold text-neutral-100">$/1M</dt><dd class="text-neutral-400" data-inema-block="m3-1-p4">Dólares por um milhão de tokens. É a unidade da tabela oficial.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">Token</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p1">Pedaço de texto que o modelo lê ou escreve, cerca de 3 a 4 caracteres em português. Mil tokens são umas 700 palavras.</dd></div><div><dt class="font-semibold text-neutral-100">Entrada (input)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p2">Tudo que vai para o modelo: prompt de sistema, sua mensagem, o histórico, documentos, resultados de ferramentas.</dd></div><div><dt class="font-semibold text-neutral-100">Saída (output)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p3">O que o modelo escreve, incluindo o raciocínio interno, que é cobrado mesmo quando não aparece.</dd></div><div><dt class="font-semibold text-neutral-100">$/1M</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p4">Dólares por um milhão de tokens. É a unidade da tabela oficial.</dd></div>
         </dl>
       </aside>
 
@@ -414,24 +414,24 @@
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Premissa honesta da trilha</h3>
-        <p class="text-neutral-300" data-inema-block="m3-1-p5">Por token, Fable 5.x é mais caro, não mais barato. Este curso não vai fingir o contrário. O que vem a seguir é como a economia aparece quando você para de contar tokens e começa a contar tarefas concluídas.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p5">Por token, Fable 5.x é mais caro, não mais barato. Este curso não vai fingir o contrário. O que vem a seguir é como a economia aparece quando você para de contar tokens e começa a contar tarefas concluídas.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 2 -->
-    <section id="topico-2" data-inema-topic="modulo-3-1#topico-2" class="mb-16">
+    <section id="topico-2" data-ARCKHÉ-topic="modulo-3-1#topico-2" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold">⚖️ Por que "por token" engana</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-1-p6">Um modelo barato que erra e precisa de duas tentativas custou o dobro do que a tabela diz. Um modelo caro que acerta de primeira, com menos idas e vindas, pode ter custado menos. A guia de otimização de custo da Anthropic resume: <strong class="text-purple-400">julgue o custo por tarefa concluída, não por pedido</strong>.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p6">Um modelo barato que erra e precisa de duas tentativas custou o dobro do que a tabela diz. Um modelo caro que acerta de primeira, com menos idas e vindas, pode ter custado menos. A guia de otimização de custo da Anthropic resume: <strong class="text-purple-400">julgue o custo por tarefa concluída, não por pedido</strong>.</p>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 320" class="w-full h-auto" role="img" aria-label="Balança entre preço por token e custo por tarefa concluída"><defs>
@@ -453,7 +453,7 @@
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🧮</span> A conta que você precisa fazer</h3>
-        <p class="text-neutral-300 mb-4" data-inema-block="m3-1-p7">Custo por tarefa = (tokens de entrada × preço de entrada + tokens de saída × preço de saída) × número de tentativas até ficar bom. Some os turnos de correção. Um modelo que precisa de 1,5 tentativa em média já perdeu boa parte da vantagem de preço.</p>
+        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m3-1-p7">Custo por tarefa = (tokens de entrada × preço de entrada + tokens de saída × preço de saída) × número de tentativas até ficar bom. Some os turnos de correção. Um modelo que precisa de 1,5 tentativa em média já perdeu boa parte da vantagem de preço.</p>
         
       </div>
 
@@ -465,21 +465,21 @@
         </table>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 3 -->
-    <section id="topico-3" data-inema-topic="modulo-3-1#topico-3" class="mb-16">
+    <section id="topico-3" data-ARCKHÉ-topic="modulo-3-1#topico-3" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
         <h2 class="text-2xl font-bold">🥇 Quando o Fable em esforço baixo vence o barato</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-1-p8">A guia oficial de otimização de custo relata: em uma bateria de pesquisa profunda, o <strong class="text-purple-400">Fable 5 em esforço baixo venceu o Sonnet 5 custando cerca de 10% menos por tarefa</strong>. O modelo com o token mais caro terminou a tarefa mais barato, porque errou menos e precisou de menos passos.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p8">A guia oficial de otimização de custo relata: em uma bateria de pesquisa profunda, o <strong class="text-purple-400">Fable 5 em esforço baixo venceu o Sonnet 5 custando cerca de 10% menos por tarefa</strong>. O modelo com o token mais caro terminou a tarefa mais barato, porque errou menos e precisou de menos passos.</p>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 226" class="w-full h-auto" role="img" aria-label="Ilustração: custo por tarefa em pesquisa profunda, Sonnet 5 contra Fable 5 em esforço baixo"><defs>
@@ -507,24 +507,24 @@
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Validade dos números</h3>
-        <p class="text-neutral-300" data-inema-block="m3-1-p9">As medições são da Anthropic, com o Fable 5 (não o 5.1), em benchmarks específicos. Elas mostram o formato da curva, não o seu resultado. Sua tarefa pode se comportar diferente. Por isso o módulo 3.2 ensina a medir.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p9">As medições são da Anthropic, com o Fable 5 (não o 5.1), em benchmarks específicos. Elas mostram o formato da curva, não o seu resultado. Sua tarefa pode se comportar diferente. Por isso o módulo 3.2 ensina a medir.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 4 -->
-    <section id="topico-4" data-inema-topic="modulo-3-1#topico-4" class="mb-16">
+    <section id="topico-4" data-ARCKHÉ-topic="modulo-3-1#topico-4" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
         <h2 class="text-2xl font-bold">🔁 A economia do assinante: parar de repetir</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-1-p10">Se você paga assinatura, não paga por token. Mas paga em <strong class="text-purple-400">cota de mensagens e em tempo</strong>. Cada vez que você cola de novo o contexto do projeto, explica quem você é ou repete uma decisão antiga, gastou um turno que a memória e a busca em conversas poderiam ter poupado.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p10">Se você paga assinatura, não paga por token. Mas paga em <strong class="text-purple-400">cota de mensagens e em tempo</strong>. Cada vez que você cola de novo o contexto do projeto, explica quem você é ou repete uma decisão antiga, gastou um turno que a memória e a busca em conversas poderiam ter poupado.</p>
 
       <div class="space-y-5 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-2">Onde o assinante gasta sem perceber</h3>
@@ -534,7 +534,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Colar o contexto de novo</h4>
             <p class="text-sm text-neutral-400 mb-2">Mil palavras a cada conversa nova</p>
-            <p class="text-neutral-300 text-sm" data-inema-block="m3-1-p11">Com memória em arquivos, perfil e projeto entram sozinhos. A Trilha 2 mostrou como testar se isso está funcionando na sua conta.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p11">Com memória em arquivos, perfil e projeto entram sozinhos. A Trilha 2 mostrou como testar se isso está funcionando na sua conta.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -542,7 +542,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Reexplicar uma decisão</h4>
             <p class="text-sm text-neutral-400 mb-2">"Como eu te disse antes..."</p>
-            <p class="text-neutral-300 text-sm" data-inema-block="m3-1-p12">Com busca em conversas, "aquela decisão sobre o fornecedor" basta. Um turno em vez de três.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p12">Com busca em conversas, "aquela decisão sobre o fornecedor" basta. Um turno em vez de três.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -550,7 +550,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Pedir para encurtar</h4>
             <p class="text-sm text-neutral-400 mb-2">"Resume isso", "menos texto"</p>
-            <p class="text-neutral-300 text-sm" data-inema-block="m3-1-p13">O prompt capturado já impõe brevidade e formatação mínima. Se você ainda pede para encurtar, está gastando turno em algo que o padrão já faz; peça o formato certo de primeira.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p13">O prompt capturado já impõe brevidade e formatação mínima. Se você ainda pede para encurtar, está gastando turno em algo que o padrão já faz; peça o formato certo de primeira.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -558,7 +558,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Refazer por falta de formato</h4>
             <p class="text-sm text-neutral-400 mb-2">"Não era isso que eu queria"</p>
-            <p class="text-neutral-300 text-sm" data-inema-block="m3-1-p14">Um exemplo positivo curto no primeiro pedido (Trilha 2, módulo 2.3) evita o segundo pedido.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p14">Um exemplo positivo curto no primeiro pedido (Trilha 2, módulo 2.3) evita o segundo pedido.</p>
           </div>
         </div>
       </div>
@@ -577,21 +577,21 @@ No fim da semana, some. Depois tente uma semana sem colar contexto (confiando na
         <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Se os números da segunda semana caíram sem perda de qualidade, a memória e a busca estão pagando a assinatura. Se não caíram, volte à Trilha 2 e veja qual teste falhou.</div>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 5 -->
-    <section id="topico-5" data-inema-topic="modulo-3-1#topico-5" class="mb-16">
+    <section id="topico-5" data-ARCKHÉ-topic="modulo-3-1#topico-5" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
         <h2 class="text-2xl font-bold">🧮 Exercício: três tarefas suas, dois modelos</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-1-p15">Escolha três tarefas que você faz com frequência. Para cada uma, estime tokens de entrada e saída e o número de tentativas que cada modelo costuma precisar. A conta é simples e o resultado costuma surpreender.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p15">Escolha três tarefas que você faz com frequência. Para cada uma, estime tokens de entrada e saída e o número de tentativas que cada modelo costuma precisar. A conta é simples e o resultado costuma surpreender.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
@@ -620,21 +620,21 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
         <ul class="space-y-2 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">&#8226;</span><span>A saída pesa mais que a entrada: 600 tokens de saída no Fable custam mais que 8.000 de entrada no Sonnet.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">&#8226;</span><span>O raciocínio interno é saída cobrada. Esforço alto gera mais raciocínio; esforço baixo, menos. É por isso que esforço é a primeira alavanca.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400 mt-1">&#8226;</span><span>Tentativas multiplicam tudo. Um modelo que acerta de primeira tem uma vantagem escondida.</span></li></ul>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
     <!-- TÓPICO 6 -->
-    <section id="topico-6" data-inema-topic="modulo-3-1#topico-6" class="mb-16">
+    <section id="topico-6" data-ARCKHÉ-topic="modulo-3-1#topico-6" class="mb-16">
       <div class="flex items-center space-x-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
         <h2 class="text-2xl font-bold">🥈 Onde o mais barato ganha</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-inema-block="m3-1-p16">A mesma guia de custo da Anthropic mostra o outro lado. Em um subconjunto de código onde os dois modelos já acertam quase tudo, o <strong class="text-purple-400">Opus 5 igualou o Fable 5 (91,7% contra 91,3%) custando cerca de 60%</strong>. Quando a tarefa satura, o modelo mais caro não tem onde ganhar.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p16">A mesma guia de custo da Anthropic mostra o outro lado. Em um subconjunto de código onde os dois modelos já acertam quase tudo, o <strong class="text-purple-400">Opus 5 igualou o Fable 5 (91,7% contra 91,3%) custando cerca de 60%</strong>. Quando a tarefa satura, o modelo mais caro não tem onde ganhar.</p>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
@@ -662,14 +662,14 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Recomendação padrão da própria Anthropic</h3>
-        <p class="text-neutral-300" data-inema-block="m3-1-p17">Para a maioria dos fluxos com agentes, comece com o Opus 5. Reserve o Fable 5.1 para o trabalho de raciocínio mais exigente e de horizonte longo. E lembre: em Claude Code e API, o modelo padrão sugerido para novos projetos é o Opus 5, não o Fable.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p17">Para a maioria dos fluxos com agentes, comece com o Opus 5. Reserve o Fable 5.1 para o trabalho de raciocínio mais exigente e de horizonte longo. E lembre: em Claude Code e API, o modelo padrão sugerido para novos projetos é o Opus 5, não o Fable.</p>
       </div>
       
-      <button type="button" data-inema-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
-        <span class="inema-ico-todo" aria-hidden="true">&#9744;</span>
-        <span class="inema-ico-done" aria-hidden="true">&#9745;</span>
-        <span class="inema-label-todo">Marcar como lido</span>
-        <span class="inema-label-done">Lido</span>
+      <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
+        <span class="ARCKHÉ-ico-todo" aria-hidden="true">&#9744;</span>
+        <span class="ARCKHÉ-ico-done" aria-hidden="true">&#9745;</span>
+        <span class="ARCKHÉ-label-todo">Marcar como lido</span>
+        <span class="ARCKHÉ-label-done">Lido</span>
       </button>
     </section>
 
@@ -724,8 +724,8 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
   <footer class="border-t border-dark-600 mt-16 py-8">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm space-y-2">
       <p>Fable 5.1 na prática · Trilha 3 — Gastar menos · 2026 ·
-        <a href="https://inema.club" target="_blank" class="text-sky-400 hover:text-sky-300">INEMA.CLUB</a> -
-        <a href="https://inema.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
+        <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
+        <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
       <p class="text-xs">Fonte do prompt de sistema: <a href="https://platform.claude.com/docs/en/release-notes/system-prompts/claude-fable-5-1" target="_blank" class="text-sky-400 hover:text-sky-300">prompt oficial publicado pela Anthropic</a> ·
         <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC" target="_blank" class="text-sky-400 hover:text-sky-300">extração pública do runtime completo</a> (não autenticada; congelada em 02/09/2026).</p>
     </div>
@@ -756,7 +756,7 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
       html.classList.toggle('dark');
       const dark = html.classList.contains('dark');
       localStorage.setItem('theme', dark ? 'dark' : 'light');
-      if (window.INEMA && INEMA.setPref) { try { INEMA.setPref('theme', dark ? 'inema-dark' : 'claro'); } catch (e) {} }
+      if (window.ARCKHÉ && ARCKHÉ.setPref) { try { ARCKHÉ.setPref('theme', dark ? 'ARCKHÉ-dark' : 'claro'); } catch (e) {} }
     });
     function openModal(modalId) { const m = document.getElementById(modalId); if (m) { m.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } }
     function closeModal() { document.querySelectorAll('.modal').forEach(m => m.classList.add('hidden')); document.body.style.overflow = 'auto'; }
@@ -781,7 +781,7 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
 
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.INEMA && typeof window.INEMA.init === 'function') { window.INEMA.init(); }
+    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
   </script>
 </body>
 </html>
