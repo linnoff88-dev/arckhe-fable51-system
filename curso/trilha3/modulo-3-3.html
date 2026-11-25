@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="ARCKHÉ-course" content="fable51">
   <title>Alavancas do 5.1 para quem usa a API | Fable 5.1 na prática</title>
-  <meta name="description" content="Módulo opcional para quem programa contra a API. O Fable 5.1 trouxe leitura de cache a um quarto de centavo por mil tokens, troca de esforço sem resetar o cache, orçamento de tarefa e fallbacks. A ordem de aplicação continua a mesma: cache, esforço, orçamento, modelo.">
+  <meta name="description" content="Módulo opcional para quem programa contra a API. O Fable 5.1 trouxe leitura de cache a um quarto de centavo por mil tokens, troca de esforço sem resetar o cache, orçamento de tarefa e fallbacks. A ordem de aplicaçêo continua a mesma: cache, esforço, orçamento, modelo.">
 
   <!-- ANTI-FOUC: bloqueante, antes de tudo -->
   <script>
@@ -230,7 +230,7 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do módulo é um bloco inline, não uma barra lateral sticky */
+    /* TOC do módulo é um bloco inline, nêo uma barra lateral sticky */
     [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
     /* Painel de aparência (classes internas) */
     .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
@@ -343,7 +343,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÓDULO 3.3</span>
       <h1 class="text-3xl sm:text-4xl font-bold mb-4">🔧 Alavancas do 5.1 para quem usa a API</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Módulo opcional para quem programa contra a API. O Fable 5.1 trouxe leitura de cache a um quarto de centavo por mil tokens, troca de esforço sem resetar o cache, orçamento de tarefa e fallbacks. A ordem de aplicação continua a mesma: cache, esforço, orçamento, modelo.</p>
+      <p class="text-lg text-neutral-400 max-w-3xl">Módulo opcional para quem programa contra a API. O Fable 5.1 trouxe leitura de cache a um quarto de centavo por mil tokens, troca de esforço sem resetar o cache, orçamento de tarefa e fallbacks. A ordem de aplicaçêo continua a mesma: cache, esforço, orçamento, modelo.</p>
       
       <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">50</div><div class="text-xs text-neutral-400">Minutos</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Avançado</div><div class="text-xs text-neutral-400">Nível</div></div><div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
@@ -373,12 +373,12 @@
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-purple-500/30 p-5 mb-6">
         <p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Novo aqui? Termos deste tópico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">API</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p1">A interface para programas chamarem o Claude diretamente, pagando por token. Diferente do aplicativo por assinatura.</dd></div><div><dt class="font-semibold text-neutral-100">Cache de prompt</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p2">Reaproveitar a parte do pedido que não muda (prompt de sistema, documentos fixos) para não pagar por ela de novo a preço cheio.</dd></div><div><dt class="font-semibold text-neutral-100">Orçamento de tarefa</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p3">Um teto de tokens que o modelo enxerga e usa para se organizar, diferente do limite duro de saída.</dd></div><div><dt class="font-semibold text-neutral-100">Lote (batch)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p4">Enviar muitos pedidos de uma vez, sem pressa, pela metade do preço.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">API</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p1">A interface para programas chamarem o Claude diretamente, pagando por token. Diferente do aplicativo por assinatura.</dd></div><div><dt class="font-semibold text-neutral-100">Cache de prompt</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p2">Reaproveitar a parte do pedido que nêo muda (prompt de sistema, documentos fixos) para nêo pagar por ela de novo a preço cheio.</dd></div><div><dt class="font-semibold text-neutral-100">Orçamento de tarefa</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p3">Um teto de tokens que o modelo enxerga e usa para se organizar, diferente do limite duro de saída.</dd></div><div><dt class="font-semibold text-neutral-100">Lote (batch)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-3-p4">Enviar muitos pedidos de uma vez, sem pressa, pela metade do preço.</dd></div>
         </dl>
       </aside>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="Ordem de aplicação das alavancas de custo na API"><defs>
+        <svg viewBox="0 0 800 200" class="w-full h-auto" role="img" aria-label="Ordem de aplicaçêo das alavancas de custo na API"><defs>
     <linearGradient id="s34-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
     <filter id="s34-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s34-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#a855f7" opacity="0.14"/></pattern>
@@ -403,7 +403,7 @@
         <text x="697.6" y="104" text-anchor="middle" fill="#e9d5ff" font-family="Inter,sans-serif" font-size="10.5" font-weight="700">5. Modelo</text>
         <text x="697.6" y="122" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">por último</text><text x="697.6" y="134.5" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5" font-weight="400">medindo</text></g>
         
-      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">Ordem de aplicação das alavancas de custo na API</text></svg>
+      <text x="400" y="178" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11" font-style="italic">Ordem de aplicaçêo das alavancas de custo na API</text></svg>
         <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-purple-400">O que olhar:</strong> Cada passo é medido antes do próximo. Trocar de modelo por último, porque reseta o cache e muda o teto.</figcaption>
       </figure>
 
@@ -411,7 +411,7 @@
         <table class="w-full text-sm text-left">
           
           <thead class="bg-dark-800 text-purple-400"><tr><th class="px-4 py-3 font-semibold">Alavanca</th><th class="px-4 py-3 font-semibold">Novidade no Fable 5.1</th><th class="px-4 py-3 font-semibold">Efeito</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Cache de prompt</td><td class="px-4 py-3 text-neutral-300">Leitura de cache a <strong>$0,25 por milhão</strong> de tokens</td><td class="px-4 py-3 text-neutral-300">Prefixo repetido custa 1/40 do preço de entrada</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Esforço</td><td class="px-4 py-3 text-neutral-300">Troca de esforço <strong>por mensagem</strong> sem resetar o cache (beta)</td><td class="px-4 py-3 text-neutral-300">Baixa o esforço no meio da conversa sem perder o prefixo cacheado</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Orçamento de tarefa</td><td class="px-4 py-3 text-neutral-300">Disponível (beta), mínimo 20.000 tokens</td><td class="px-4 py-3 text-neutral-300">Modelo se organiza dentro do teto: -18% por -2,7 pontos; -47% por -4,4</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Fallbacks</td><td class="px-4 py-3 text-neutral-300">Roteamento server-side por categoria de recusa</td><td class="px-4 py-3 text-neutral-300">Em recusa de segurança, outro modelo responde sem código extra</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Lote</td><td class="px-4 py-3 text-neutral-300">Igual: 50% do preço</td><td class="px-4 py-3 text-neutral-300">Para tudo que não precisa de resposta imediata</td></tr></tbody>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Cache de prompt</td><td class="px-4 py-3 text-neutral-300">Leitura de cache a <strong>$0,25 por milhêo</strong> de tokens</td><td class="px-4 py-3 text-neutral-300">Prefixo repetido custa 1/40 do preço de entrada</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Esforço</td><td class="px-4 py-3 text-neutral-300">Troca de esforço <strong>por mensagem</strong> sem resetar o cache (beta)</td><td class="px-4 py-3 text-neutral-300">Baixa o esforço no meio da conversa sem perder o prefixo cacheado</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Orçamento de tarefa</td><td class="px-4 py-3 text-neutral-300">Disponível (beta), mínimo 20.000 tokens</td><td class="px-4 py-3 text-neutral-300">Modelo se organiza dentro do teto: -18% por -2,7 pontos; -47% por -4,4</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Fallbacks</td><td class="px-4 py-3 text-neutral-300">Roteamento server-side por categoria de recusa</td><td class="px-4 py-3 text-neutral-300">Em recusa de segurança, outro modelo responde sem código extra</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Lote</td><td class="px-4 py-3 text-neutral-300">Igual: 50% do preço</td><td class="px-4 py-3 text-neutral-300">Para tudo que nêo precisa de resposta imediata</td></tr></tbody>
         </table>
       </div>
       
@@ -429,11 +429,11 @@
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold">🗄️ Cache de prompt: o ganho grátis</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-3-p5">O cache funciona por <strong class="text-purple-400">prefixo</strong>: qualquer byte que mude no início invalida tudo que vem depois. A ordem de renderização é ferramentas, depois prompt de sistema, depois mensagens. Coloque o que é estável primeiro e o que varia (data, identificador do pedido, a pergunta) depois do último ponto de cache.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-3-p5">O cache funciona por <strong class="text-purple-400">prefixo</strong>: qualquer byte que mude no início invalida tudo que vem depois. A ordem de renderizaçêo é ferramentas, depois prompt de sistema, depois mensagens. Coloque o que é estável primeiro e o que varia (data, identificador do pedido, a pergunta) depois do último ponto de cache.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Forma do pedido com ponto de cache no prompt de sistema (corpo da requisição, independente de linguagem)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Forma do pedido com ponto de cache no prompt de sistema (corpo da requisiçêo, independente de linguagem)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors">Copiar</button>
         </div>
         <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-json">{
@@ -450,13 +450,13 @@
     { "role": "user", "content": "&lt;a pergunta que varia&gt;" }
   ]
 }</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Na resposta, olhe usage.cache_read_input_tokens. Na primeira chamada é zero (escrita). Da segunda em diante, com o mesmo prefixo, deve ser grande. Se continuar zero, há um invalidador silencioso: data no prompt, JSON sem ordenação fixa, lista de ferramentas que muda.</div>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Na resposta, olhe usage.cache_read_input_tokens. Na primeira chamada é zero (escrita). Da segunda em diante, com o mesmo prefixo, deve ser grande. Se continuar zero, há um invalidador silencioso: data no prompt, JSON sem ordenaçêo fixa, lista de ferramentas que muda.</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
           <h4 class="font-bold text-purple-400 mb-4">&#10003; Mantém o cache</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Prompt de sistema congelado, sem hora ou data.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Lista de ferramentas na mesma ordem sempre.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Documentos fixos antes do ponto de cache; pergunta depois.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Instrução nova no meio da conversa como mensagem de sistema no array, não editando o topo.</span></li></ul>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Prompt de sistema congelado, sem hora ou data.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Lista de ferramentas na mesma ordem sempre.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Documentos fixos antes do ponto de cache; pergunta depois.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Instruçêo nova no meio da conversa como mensagem de sistema no array, nêo editando o topo.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
           <h4 class="font-bold text-red-400 mb-4">&#10007; Quebra o cache sem avisar</h4>
@@ -466,7 +466,7 @@
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Prefixo mínimo</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m3-3-p6">Prefixos curtos demais não são cacheados (o mínimo varia por modelo, de algumas centenas a alguns milhares de tokens). Se seu prompt de sistema é pequeno, junte a ele os documentos de referência estáveis para passar do mínimo.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-3-p6">Prefixos curtos demais nêo sêo cacheados (o mínimo varia por modelo, de algumas centenas a alguns milhares de tokens). Se seu prompt de sistema é pequeno, junte a ele os documentos de referência estáveis para passar do mínimo.</p>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -503,12 +503,12 @@
     { "role": "user", "content": "&lt;pedido rotineiro 2&gt;" }
   ]
 }</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Compare usage.cache_read_input_tokens antes e depois da mensagem de esforço: não deve cair. E a resposta ao pedido 2 deve vir mais curta e rápida.</div>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Compare usage.cache_read_input_tokens antes e depois da mensagem de esforço: nêo deve cair. E a resposta ao pedido 2 deve vir mais curta e rápida.</div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Regras de colocação</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m3-3-p8">A mensagem de esforço (conteúdo vazio) pode ficar em qualquer posição. Uma mensagem de sistema com TEXTO no meio da conversa tem regras: deve vir depois de uma mensagem de usuário e ser a última ou ser seguida por um turno do assistente; não pode ser a primeira. Sonnet 5 não suporta mensagens de sistema no meio.</p>
+        <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Regras de colocaçêo</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-3-p8">A mensagem de esforço (conteúdo vazio) pode ficar em qualquer posiçêo. Uma mensagem de sistema com TEXTO no meio da conversa tem regras: deve vir depois de uma mensagem de usuário e ser a última ou ser seguida por um turno do assistente; nêo pode ser a primeira. Sonnet 5 nêo suporta mensagens de sistema no meio.</p>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -525,7 +525,7 @@
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
         <h2 class="text-2xl font-bold">🎯 Orçamento de tarefa</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-3-p9">O limite de saída (<code>max_tokens</code>) corta o modelo sem aviso. O <strong class="text-purple-400">orçamento de tarefa</strong> é diferente: o servidor injeta um contador que o modelo enxerga, e ele passa a se organizar para terminar dentro do teto. É advisório, não uma parede.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-3-p9">O limite de saída (<code>max_tokens</code>) corta o modelo sem aviso. O <strong class="text-purple-400">orçamento de tarefa</strong> é diferente: o servidor injeta um contador que o modelo enxerga, e ele passa a se organizar para terminar dentro do teto. É advisório, nêo uma parede.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
@@ -571,7 +571,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Verifique aderência</h4>
             <p class="text-sm text-neutral-400 mb-2">É advisório</p>
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p12">O modelo tende a respeitar, mas não é garantido. Orçamentos muito apertados podem gerar comportamento parecido com recusa.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p12">O modelo tende a respeitar, mas nêo é garantido. Orçamentos muito apertados podem gerar comportamento parecido com recusa.</p>
           </div>
         </div>
       </div>
@@ -590,7 +590,7 @@
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
         <h2 class="text-2xl font-bold">📦 Lote pela metade e fallbacks</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-3-p13">Duas alavancas de operação. A primeira é para tudo que <strong class="text-purple-400">não precisa de resposta agora</strong>: classificação noturna, geração de relatórios, extração de milhares de documentos. A segunda é para o Fable 5.1 especificamente, que pode declinar um pedido por classificador de segurança.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-3-p13">Duas alavancas de operaçêo. A primeira é para tudo que <strong class="text-purple-400">nêo precisa de resposta agora</strong>: classificaçêo noturna, geraçêo de relatórios, extraçêo de milhares de documentos. A segunda é para o Fable 5.1 especificamente, que pode declinar um pedido por classificador de segurança.</p>
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
@@ -607,12 +607,12 @@
   ]
 }
 // depois: consultar processing_status até "ended" e ler os resultados POR custom_id</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Os resultados chegam em qualquer ordem: nunca use a posição, sempre o custom_id. O custo aparece pela metade do preço de lista.</div>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Os resultados chegam em qualquer ordem: nunca use a posiçêo, sempre o custom_id. O custo aparece pela metade do preço de lista.</div>
       </div>
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Fallback server-side por categoria de recusa (beta) — recomendado por padrão no Fable 5.1</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Fallback server-side por categoria de recusa (beta) — recomendado por padrêo no Fable 5.1</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors">Copiar</button>
         </div>
         <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-json">// cabeçalho HTTP:  anthropic-beta: server-side-fallback-2026-07-01
@@ -623,13 +623,13 @@
   "messages": [ { "role": "user", "content": "&lt;pedido&gt;" } ]
 }
 // Sempre checar stop_reason antes de ler content:
-// "refusal" traz stop_details.category (ex.: "cyber", "bio") e explicação.</code></pre>
+// "refusal" traz stop_details.category (ex.: "cyber", "bio") e explicaçêo.</code></pre>
         <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Envie um pedido que costume ser declinado e observe: com fallbacks, a resposta vem de outro modelo em vez de um stop_reason "refusal". Sem fallbacks, você precisa tratar a recusa no seu código.</div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Outras regras do 5.1 que afetam código antigo</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m3-3-p14">Forçar uso de ferramenta (tool_choice "any" ou "tool") devolve erro 400: use "auto" com instrução no prompt, ou saída estruturada. Preenchimento prévio da resposta do assistente também devolve 400. Blocos de raciocínio são presos ao modelo que os produziu e histórico editado invalida raciocínio anterior: mantenha o histórico só acrescentando.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-3-p14">Forçar uso de ferramenta (tool_choice "any" ou "tool") devolve erro 400: use "auto" com instruçêo no prompt, ou saída estruturada. Preenchimento prévio da resposta do assistente também devolve 400. Blocos de raciocínio sêo presos ao modelo que os produziu e histórico editado invalida raciocínio anterior: mantenha o histórico só acrescentando.</p>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -655,7 +655,7 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Entradas congeladas</h4>
             <p class="text-sm text-neutral-400 mb-2">20 a 30 pedidos reais</p>
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p15">Tirados dos seus logs ou escritos por você. Inclua os difíceis. Toda configuração roda exatamente o mesmo conjunto.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p15">Tirados dos seus logs ou escritos por você. Inclua os difíceis. Toda configuraçêo roda exatamente o mesmo conjunto.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -670,16 +670,16 @@
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">3</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Executor</h4>
-            <p class="text-sm text-neutral-400 mb-2">Um roteiro por configuração</p>
+            <p class="text-sm text-neutral-400 mb-2">Um roteiro por configuraçêo</p>
             <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p17">Roda o conjunto, grava cada saída e o campo usage da resposta (entrada, saída, cache lido, cache escrito), e imprime acerto e custo por tarefa.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Aprovação de custo</h4>
+            <h4 class="font-semibold text-white mb-2">Aprovaçêo de custo</h4>
             <p class="text-sm text-neutral-400 mb-2">Antes de rodar</p>
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p18">Estime: entradas × configurações × custo por tarefa. Uma varredura de esforço em três níveis com repetição é várias rodadas. Saiba quanto vai gastar antes.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-3-p18">Estime: entradas × configurações × custo por tarefa. Uma varredura de esforço em três níveis com repetiçêo é várias rodadas. Saiba quanto vai gastar antes.</p>
           </div>
         </div>
       </div>
@@ -696,16 +696,16 @@
 
 custo_por_tarefa = soma dos custos de todas as chamadas até a tarefa passar no julgamento
                    (incluindo tentativas que falharam)</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Some por tarefa, não por chamada. Uma tarefa que precisou de três chamadas custa a soma das três. Compare configurações por essa soma e pela taxa de acerto, sempre juntas.</div>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Some por tarefa, nêo por chamada. Uma tarefa que precisou de três chamadas custa a soma das três. Compare configurações por essa soma e pela taxa de acerto, sempre juntas.</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
-          <h4 class="font-bold text-purple-400 mb-4">&#10003; Decisão bem feita</h4>
-          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Acerto e custo por tarefa lidos juntos.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Cache medido a partir da segunda chamada (a primeira é escrita, custa 1,25x).</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Uma alavanca por diff; reverter é limpo.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Repetição quando a diferença é de uma ou duas tarefas.</span></li></ul>
+          <h4 class="font-bold text-purple-400 mb-4">&#10003; Decisêo bem feita</h4>
+          <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Acerto e custo por tarefa lidos juntos.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Cache medido a partir da segunda chamada (a primeira é escrita, custa 1,25x).</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Uma alavanca por diff; reverter é limpo.</span></li><li class="flex items-start space-x-2"><span class="text-purple-400">&#10003;</span><span>Repetiçêo quando a diferença é de uma ou duas tarefas.</span></li></ul>
         </div>
         <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-          <h4 class="font-bold text-red-400 mb-4">&#10007; Decisão mal feita</h4>
+          <h4 class="font-bold text-red-400 mb-4">&#10007; Decisêo mal feita</h4>
           <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Olhar só o custo e ignorar que a acurácia caiu.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Medir cache na primeira chamada e concluir que "ficou mais caro".</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Mudar três coisas e atribuir o ganho a uma.</span></li><li class="flex items-start space-x-2"><span class="text-red-400">&#10007;</span><span>Concluir por uma rodada com resultado apertado.</span></li></ul>
         </div>
       </div>
@@ -722,13 +722,13 @@ custo_por_tarefa = soma dos custos de todas as chamadas até a tarefa passar no 
     
       <div class="bg-dark-800 rounded-2xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-1 flex items-center"><span class="mr-2">🧪</span> Teste rápido do módulo</h3>
-        <p class="text-sm text-neutral-400 mb-5">Três perguntas. Clique numa opção para ver a resposta.</p>
+        <p class="text-sm text-neutral-400 mb-5">Três perguntas. Clique numa opçêo para ver a resposta.</p>
         <div class="space-y-5">
         
           <div class="qz" data-q="1">
             <p class="font-semibold text-neutral-100 mb-3">1. Qual alavanca deve ser aplicada primeiro na API, segundo a guia oficial?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Trocar para um modelo mais barato.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">Cache de prompt e higiene de tokens: são ganhos sem troca de qualidade.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Orçamento de tarefa.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Trocar para um modelo mais barato.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">Cache de prompt e higiene de tokens: sêo ganhos sem troca de qualidade.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Orçamento de tarefa.</button>
             </div>
             <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="Ganhos grátis primeiro. Esforço é o primeiro trade-off; modelo, o último."></p>
           </div>
@@ -742,7 +742,7 @@ custo_por_tarefa = soma dos custos de todas as chamadas até a tarefa passar no 
           <div class="qz" data-q="3">
             <p class="font-semibold text-neutral-100 mb-3">3. No Fable 5.1, como baixar o esforço no meio da conversa sem perder o cache?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Editar o output_config do topo do pedido.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">Acrescentar uma mensagem de sistema com conteúdo vazio e o novo esforço (beta).</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Não é possível.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Editar o output_config do topo do pedido.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">Acrescentar uma mensagem de sistema com conteúdo vazio e o novo esforço (beta).</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Nêo é possível.</button>
             </div>
             <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="É a novidade do 5.1 (e Opus 5). Editar o topo reseta o cache; a mensagem no array preserva o prefixo."></p>
           </div>
@@ -754,7 +754,7 @@ custo_por_tarefa = soma dos custos de todas as chamadas até a tarefa passar no 
       <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
         <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span> Resumo do módulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Ordem</strong><span class="text-neutral-400"> - cache, esforço, orçamento, lote e fallback, modelo por último.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Cache</strong><span class="text-neutral-400"> - prefixo estável, sem data; leitura a $0,25 por milhão no 5.1; verifique cache_read_input_tokens.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Esforço por mensagem</strong><span class="text-neutral-400"> - mensagem de sistema vazia com novo esforço, sem resetar o cache (beta).</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Orçamento de tarefa</strong><span class="text-neutral-400"> - mínimo 20.000; defina uma vez a partir do p90; -18% por -2,7 pontos folgado, -47% por -4,4 apertado.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Lote e fallback</strong><span class="text-neutral-400"> - batch a 50% por custom_id; fallbacks "default" para recusas do 5.1.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Medir</strong><span class="text-neutral-400"> - 20 a 30 pedidos, julgamento barato, executor que grava usage, custo por tarefa somando tentativas.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Ordem</strong><span class="text-neutral-400"> - cache, esforço, orçamento, lote e fallback, modelo por último.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Cache</strong><span class="text-neutral-400"> - prefixo estável, sem data; leitura a $0,25 por milhêo no 5.1; verifique cache_read_input_tokens.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Esforço por mensagem</strong><span class="text-neutral-400"> - mensagem de sistema vazia com novo esforço, sem resetar o cache (beta).</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Orçamento de tarefa</strong><span class="text-neutral-400"> - mínimo 20.000; defina uma vez a partir do p90; -18% por -2,7 pontos folgado, -47% por -4,4 apertado.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Lote e fallback</strong><span class="text-neutral-400"> - batch a 50% por custom_id; fallbacks "default" para recusas do 5.1.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Medir</strong><span class="text-neutral-400"> - 20 a 30 pedidos, julgamento barato, executor que grava usage, custo por tarefa somando tentativas.</span></div></div>
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
@@ -772,7 +772,7 @@ custo_por_tarefa = soma dos custos de todas as chamadas até a tarefa passar no 
         <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
         <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
       <p class="text-xs">Fonte do prompt de sistema: <a href="https://platform.claude.com/docs/en/release-notes/system-prompts/claude-fable-5-1" target="_blank" class="text-sky-400 hover:text-sky-300">prompt oficial publicado pela Anthropic</a> ·
-        <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC" target="_blank" class="text-sky-400 hover:text-sky-300">extração pública do runtime completo</a> (não autenticada; congelada em 02/09/2026).</p>
+        <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC" target="_blank" class="text-sky-400 hover:text-sky-300">extraçêo pública do runtime completo</a> (nêo autenticada; congelada em 02/09/2026).</p>
     </div>
   </footer>
 
@@ -814,7 +814,7 @@ custo_por_tarefa = soma dos custos de todas as chamadas até a tarefa passar no 
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? '✓ Certo. ' : '✗ Não é essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? '✓ Certo. ' : '✗ Nêo é essa. ') + (fb.getAttribute('data-text') || '');
     });
     // Copiar código
     document.addEventListener('click', (e) => {

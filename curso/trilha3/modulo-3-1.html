@@ -230,7 +230,7 @@
     .qz-opt[data-state="no"] { border-color: #ef4444; background: rgba(239,68,68,.12); }
     .qz-fb { display:none; } .qz[data-answered] .qz-fb { display:block; }
 
-    /* TOC do módulo é um bloco inline, não uma barra lateral sticky */
+    /* TOC do módulo é um bloco inline, nêo uma barra lateral sticky */
     [data-ARCKHÉ-toc] { position: static !important; top: auto !important; max-height: none !important; }
     /* Painel de aparência (classes internas) */
     .ARCKHÉ-appearance-sec { margin-bottom: .75rem; }
@@ -373,20 +373,20 @@
       <aside class="bg-dark-800/60 rounded-xl border border-dashed border-purple-500/30 p-5 mb-6">
         <p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Novo aqui? Termos deste tópico</p>
         <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
-          <div><dt class="font-semibold text-neutral-100">Token</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p1">Pedaço de texto que o modelo lê ou escreve, cerca de 3 a 4 caracteres em português. Mil tokens são umas 700 palavras.</dd></div><div><dt class="font-semibold text-neutral-100">Entrada (input)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p2">Tudo que vai para o modelo: prompt de sistema, sua mensagem, o histórico, documentos, resultados de ferramentas.</dd></div><div><dt class="font-semibold text-neutral-100">Saída (output)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p3">O que o modelo escreve, incluindo o raciocínio interno, que é cobrado mesmo quando não aparece.</dd></div><div><dt class="font-semibold text-neutral-100">$/1M</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p4">Dólares por um milhão de tokens. É a unidade da tabela oficial.</dd></div>
+          <div><dt class="font-semibold text-neutral-100">Token</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p1">Pedaço de texto que o modelo lê ou escreve, cerca de 3 a 4 caracteres em português. Mil tokens sêo umas 700 palavras.</dd></div><div><dt class="font-semibold text-neutral-100">Entrada (input)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p2">Tudo que vai para o modelo: prompt de sistema, sua mensagem, o histórico, documentos, resultados de ferramentas.</dd></div><div><dt class="font-semibold text-neutral-100">Saída (output)</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p3">O que o modelo escreve, incluindo o raciocínio interno, que é cobrado mesmo quando nêo aparece.</dd></div><div><dt class="font-semibold text-neutral-100">$/1M</dt><dd class="text-neutral-400" data-ARCKHÉ-block="m3-1-p4">Dólares por um milhêo de tokens. É a unidade da tabela oficial.</dd></div>
         </dl>
       </aside>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           <caption class="text-left text-xs text-neutral-500 px-4 pt-3">Preços de lista da API direta da Anthropic (tabela oficial, consultada em setembro de 2026). Plataformas parceiras podem diferir.</caption>
-          <thead class="bg-dark-800 text-purple-400"><tr><th class="px-4 py-3 font-semibold">Modelo</th><th class="px-4 py-3 font-semibold">Entrada ($/1M)</th><th class="px-4 py-3 font-semibold">Saída ($/1M)</th><th class="px-4 py-3 font-semibold">Em relação ao Fable</th></tr></thead>
+          <thead class="bg-dark-800 text-purple-400"><tr><th class="px-4 py-3 font-semibold">Modelo</th><th class="px-4 py-3 font-semibold">Entrada ($/1M)</th><th class="px-4 py-3 font-semibold">Saída ($/1M)</th><th class="px-4 py-3 font-semibold">Em relaçêo ao Fable</th></tr></thead>
           <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Fable 5.1 / Fable 5</td><td class="px-4 py-3 text-neutral-300">10,00</td><td class="px-4 py-3 text-neutral-300">50,00</td><td class="px-4 py-3 text-neutral-300">referência</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Opus 5</td><td class="px-4 py-3 text-neutral-300">5,00</td><td class="px-4 py-3 text-neutral-300">25,00</td><td class="px-4 py-3 text-neutral-300">metade</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Sonnet 5</td><td class="px-4 py-3 text-neutral-300">2,00</td><td class="px-4 py-3 text-neutral-300">10,00</td><td class="px-4 py-3 text-neutral-300">um quinto</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Haiku 4.5</td><td class="px-4 py-3 text-neutral-300">1,00</td><td class="px-4 py-3 text-neutral-300">5,00</td><td class="px-4 py-3 text-neutral-300">um décimo</td></tr></tbody>
         </table>
       </div>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 382" class="w-full h-auto" role="img" aria-label="Preço de saída por milhão de tokens: Fable comparado aos outros modelos"><defs>
+        <svg viewBox="0 0 800 382" class="w-full h-auto" role="img" aria-label="Preço de saída por milhêo de tokens: Fable comparado aos outros modelos"><defs>
     <linearGradient id="s24-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
     <filter id="s24-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s24-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#a855f7" opacity="0.14"/></pattern>
@@ -409,12 +409,12 @@
         <text x="237.45454545454544" y="309" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">$1</text>
         <g class="wf-a"><rect x="220" y="320" width="47.27272727272727" height="20" rx="6" fill="url(#s24-g)" filter="url(#s24-glow)"/></g>
         <text x="275.27272727272725" y="335" fill="#c084fc" font-family="Inter,sans-serif" font-size="12" font-weight="700">$5</text></g></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-purple-400">O que olhar:</strong> A saída custa cinco vezes a entrada em todos os modelos. E o Fable é o topo da escada. Se a conversa terminasse aqui, a conclusão seria "use o mais barato". Ela não termina aqui.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-purple-400">O que olhar:</strong> A saída custa cinco vezes a entrada em todos os modelos. E o Fable é o topo da escada. Se a conversa terminasse aqui, a conclusêo seria "use o mais barato". Ela nêo termina aqui.</figcaption>
       </figure>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Premissa honesta da trilha</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p5">Por token, Fable 5.x é mais caro, não mais barato. Este curso não vai fingir o contrário. O que vem a seguir é como a economia aparece quando você para de contar tokens e começa a contar tarefas concluídas.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p5">Por token, Fable 5.x é mais caro, nêo mais barato. Este curso nêo vai fingir o contrário. O que vem a seguir é como a economia aparece quando você para de contar tokens e começa a contar tarefas concluídas.</p>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -431,7 +431,7 @@
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold">⚖️ Por que "por token" engana</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p6">Um modelo barato que erra e precisa de duas tentativas custou o dobro do que a tabela diz. Um modelo caro que acerta de primeira, com menos idas e vindas, pode ter custado menos. A guia de otimização de custo da Anthropic resume: <strong class="text-purple-400">julgue o custo por tarefa concluída, não por pedido</strong>.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p6">Um modelo barato que erra e precisa de duas tentativas custou o dobro do que a tabela diz. Um modelo caro que acerta de primeira, com menos idas e vindas, pode ter custado menos. A guia de otimizaçêo de custo da Anthropic resume: <strong class="text-purple-400">julgue o custo por tarefa concluída, nêo por pedido</strong>.</p>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
         <svg viewBox="0 0 800 320" class="w-full h-auto" role="img" aria-label="Balança entre preço por token e custo por tarefa concluída"><defs>
@@ -453,7 +453,7 @@
 
       <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🧮</span> A conta que você precisa fazer</h3>
-        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m3-1-p7">Custo por tarefa = (tokens de entrada × preço de entrada + tokens de saída × preço de saída) × número de tentativas até ficar bom. Some os turnos de correção. Um modelo que precisa de 1,5 tentativa em média já perdeu boa parte da vantagem de preço.</p>
+        <p class="text-neutral-300 mb-4" data-ARCKHÉ-block="m3-1-p7">Custo por tarefa = (tokens de entrada × preço de entrada + tokens de saída × preço de saída) × número de tentativas até ficar bom. Some os turnos de correçêo. Um modelo que precisa de 1,5 tentativa em média já perdeu boa parte da vantagem de preço.</p>
         
       </div>
 
@@ -479,15 +479,15 @@
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
         <h2 class="text-2xl font-bold">🥇 Quando o Fable em esforço baixo vence o barato</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p8">A guia oficial de otimização de custo relata: em uma bateria de pesquisa profunda, o <strong class="text-purple-400">Fable 5 em esforço baixo venceu o Sonnet 5 custando cerca de 10% menos por tarefa</strong>. O modelo com o token mais caro terminou a tarefa mais barato, porque errou menos e precisou de menos passos.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p8">A guia oficial de otimizaçêo de custo relata: em uma bateria de pesquisa profunda, o <strong class="text-purple-400">Fable 5 em esforço baixo venceu o Sonnet 5 custando cerca de 10% menos por tarefa</strong>. O modelo com o token mais caro terminou a tarefa mais barato, porque errou menos e precisou de menos passos.</p>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 226" class="w-full h-auto" role="img" aria-label="Ilustração: custo por tarefa em pesquisa profunda, Sonnet 5 contra Fable 5 em esforço baixo"><defs>
+        <svg viewBox="0 0 800 226" class="w-full h-auto" role="img" aria-label="Ilustraçêo: custo por tarefa em pesquisa profunda, Sonnet 5 contra Fable 5 em esforço baixo"><defs>
     <linearGradient id="s26-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
     <filter id="s26-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s26-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#a855f7" opacity="0.14"/></pattern>
   </defs><rect width="800" height="226" fill="url(#s26-grid)"/>
-      <rect x="220" y="22" width="14" height="10" rx="3" fill="#9ca3af" opacity="0.55"/><text x="240" y="31" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">Sonnet 5 (padrão)</text>
+      <rect x="220" y="22" width="14" height="10" rx="3" fill="#9ca3af" opacity="0.55"/><text x="240" y="31" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">Sonnet 5 (padrêo)</text>
       <rect x="350" y="22" width="14" height="10" rx="3" fill="#a855f7"/><text x="370" y="31" fill="#c084fc" font-family="Inter,sans-serif" font-size="11" font-weight="600">Fable 5 (low)</text><g><text x="206" y="86" text-anchor="end" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="13" font-weight="600">Custo por tarefa</text>
         <rect x="220" y="60" width="472.7272727272727" height="20" rx="6" fill="#9ca3af" opacity="0.55"/>
         <text x="700.7272727272727" y="75" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">100</text>
@@ -502,12 +502,12 @@
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> Outros números da mesma guia (pesquisa e conhecimento, Fable 5)</h3>
-        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong>Esforço medium</strong> igualou a acurácia do padrão custando <strong>70% a 85%</strong> do preço.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong>Esforço low</strong> perdeu 1 a 3 pontos e cortou <strong>um terço a metade</strong> do custo por tarefa.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O padrão (high) não comprou nada mensurável acima de medium em nenhum dos quatro benchmarks medidos.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Esforço baixo também é mais rápido: 4,5 contra 7,9 minutos por problema num benchmark de pesquisa.</span></li></ul>
+        <ul class="space-y-3 text-neutral-300"><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong>Esforço medium</strong> igualou a acurácia do padrêo custando <strong>70% a 85%</strong> do preço.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span><strong>Esforço low</strong> perdeu 1 a 3 pontos e cortou <strong>um terço a metade</strong> do custo por tarefa.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>O padrêo (high) nêo comprou nada mensurável acima de medium em nenhum dos quatro benchmarks medidos.</span></li><li class="flex items-start space-x-2"><span class="text-blue-400 mt-1">&#8226;</span><span>Esforço baixo também é mais rápido: 4,5 contra 7,9 minutos por problema num benchmark de pesquisa.</span></li></ul>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span class="mr-2">⚠️</span> Validade dos números</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p9">As medições são da Anthropic, com o Fable 5 (não o 5.1), em benchmarks específicos. Elas mostram o formato da curva, não o seu resultado. Sua tarefa pode se comportar diferente. Por isso o módulo 3.2 ensina a medir.</p>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p9">As medições sêo da Anthropic, com o Fable 5 (nêo o 5.1), em benchmarks específicos. Elas mostram o formato da curva, nêo o seu resultado. Sua tarefa pode se comportar diferente. Por isso o módulo 3.2 ensina a medir.</p>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -524,7 +524,7 @@
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
         <h2 class="text-2xl font-bold">🔁 A economia do assinante: parar de repetir</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p10">Se você paga assinatura, não paga por token. Mas paga em <strong class="text-purple-400">cota de mensagens e em tempo</strong>. Cada vez que você cola de novo o contexto do projeto, explica quem você é ou repete uma decisão antiga, gastou um turno que a memória e a busca em conversas poderiam ter poupado.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p10">Se você paga assinatura, nêo paga por token. Mas paga em <strong class="text-purple-400">cota de mensagens e em tempo</strong>. Cada vez que você cola de novo o contexto do projeto, explica quem você é ou repete uma decisêo antiga, gastou um turno que a memória e a busca em conversas poderiam ter poupado.</p>
 
       <div class="space-y-5 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-2">Onde o assinante gasta sem perceber</h3>
@@ -540,9 +540,9 @@
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">2</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
-            <h4 class="font-semibold text-white mb-2">Reexplicar uma decisão</h4>
+            <h4 class="font-semibold text-white mb-2">Reexplicar uma decisêo</h4>
             <p class="text-sm text-neutral-400 mb-2">"Como eu te disse antes..."</p>
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p12">Com busca em conversas, "aquela decisão sobre o fornecedor" basta. Um turno em vez de três.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p12">Com busca em conversas, "aquela decisêo sobre o fornecedor" basta. Um turno em vez de três.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
@@ -550,14 +550,14 @@
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Pedir para encurtar</h4>
             <p class="text-sm text-neutral-400 mb-2">"Resume isso", "menos texto"</p>
-            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p13">O prompt capturado já impõe brevidade e formatação mínima. Se você ainda pede para encurtar, está gastando turno em algo que o padrão já faz; peça o formato certo de primeira.</p>
+            <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p13">O prompt capturado já impõe brevidade e formataçêo mínima. Se você ainda pede para encurtar, está gastando turno em algo que o padrêo já faz; peça o formato certo de primeira.</p>
           </div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center"><span class="text-purple-400 font-bold">4</span></div>
           <div class="flex-1 bg-dark-800 rounded-xl p-6 border border-dark-600">
             <h4 class="font-semibold text-white mb-2">Refazer por falta de formato</h4>
-            <p class="text-sm text-neutral-400 mb-2">"Não era isso que eu queria"</p>
+            <p class="text-sm text-neutral-400 mb-2">"Nêo era isso que eu queria"</p>
             <p class="text-neutral-300 text-sm" data-ARCKHÉ-block="m3-1-p14">Um exemplo positivo curto no primeiro pedido (Trilha 2, módulo 2.3) evita o segundo pedido.</p>
           </div>
         </div>
@@ -565,7 +565,7 @@
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Medir sua própria repetição por uma semana</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Medir sua própria repetiçêo por uma semana</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors">Copiar</button>
         </div>
         <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Durante uma semana, a cada conversa nova com o Claude, anote:
@@ -574,7 +574,7 @@
 - Quantas vezes pediu "encurta" ou "refaz"? &lt;número&gt;
 
 No fim da semana, some. Depois tente uma semana sem colar contexto (confiando na memória e na busca) e compare.</code></pre>
-        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Se os números da segunda semana caíram sem perda de qualidade, a memória e a busca estão pagando a assinatura. Se não caíram, volte à Trilha 2 e veja qual teste falhou.</div>
+        <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Se os números da segunda semana caíram sem perda de qualidade, a memória e a busca estêo pagando a assinatura. Se nêo caíram, volte à Trilha 2 e veja qual teste falhou.</div>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -595,7 +595,7 @@ No fim da semana, some. Depois tente uma semana sem colar contexto (confiando na
 
       <div class="codebox bg-dark-800 rounded-xl border border-purple-500/30 overflow-hidden mb-6">
         <div class="px-5 py-3 border-b border-dark-600 flex items-start justify-between gap-3 flex-wrap">
-          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Planilha mínima de custo por tarefa (copie para uma planilha ou faça à mão)</p></div>
+          <div><p class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-1">Copie e rode</p><p class="text-sm text-neutral-300">Planilha mínima de custo por tarefa (copie para uma planilha ou faça à mêo)</p></div>
           <button type="button" data-copy class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors">Copiar</button>
         </div>
         <pre class="p-5 text-sm text-neutral-100 bg-dark-900/60 font-mono leading-relaxed"><code class="language-text">Tarefa: &lt;ex.: resumo de relatório de 10 páginas para a diretoria&gt;
@@ -608,9 +608,9 @@ Modelo A: &lt;Fable 5.1, esforço low&gt;
 
 Modelo B: &lt;Sonnet 5&gt;
   custo = 8.000/1M × $2 + 600/1M × $10 = $0,016 + $0,006 = $0,022 por tentativa
-  tentativas típicas: &lt;2, porque costuma precisar de correção&gt;   →   custo por tarefa: $0,044
+  tentativas típicas: &lt;2, porque costuma precisar de correçêo&gt;   →   custo por tarefa: $0,044
 
-Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mesmo com retrabalho&gt;</code></pre>
+Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observaçêo: &lt;B ainda ganha mesmo com retrabalho&gt;</code></pre>
         <div class="px-5 py-3 border-t border-dark-600 text-sm text-neutral-400"><strong class="text-neutral-300">Como verificar:</strong> Repita para as três tarefas. Se o modelo barato ganhou nas três mesmo contando tentativas, ele é o certo para elas. Se o caro em esforço baixo ganhou em alguma, você achou uma tarefa onde a tabela de preços mente.</div>
       </div>
 
@@ -634,18 +634,18 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
         <h2 class="text-2xl font-bold">🥈 Onde o mais barato ganha</h2>
       </div>
-      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p16">A mesma guia de custo da Anthropic mostra o outro lado. Em um subconjunto de código onde os dois modelos já acertam quase tudo, o <strong class="text-purple-400">Opus 5 igualou o Fable 5 (91,7% contra 91,3%) custando cerca de 60%</strong>. Quando a tarefa satura, o modelo mais caro não tem onde ganhar.</p>
+      <p class="text-neutral-300 mb-6 leading-relaxed" data-ARCKHÉ-block="m3-1-p16">A mesma guia de custo da Anthropic mostra o outro lado. Em um subconjunto de código onde os dois modelos já acertam quase tudo, o <strong class="text-purple-400">Opus 5 igualou o Fable 5 (91,7% contra 91,3%) custando cerca de 60%</strong>. Quando a tarefa satura, o modelo mais caro nêo tem onde ganhar.</p>
 
       <div class="overflow-x-auto rounded-xl border border-dark-600 mb-6">
         <table class="w-full text-sm text-left">
           
-          <thead class="bg-dark-800 text-purple-400"><tr><th class="px-4 py-3 font-semibold">Situação</th><th class="px-4 py-3 font-semibold">Medição publicada</th><th class="px-4 py-3 font-semibold">Decisão</th></tr></thead>
-          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Código onde ambos acertam quase tudo</td><td class="px-4 py-3 text-neutral-300">Opus 5: 91,7% · Fable 5: 91,3% · custo do Opus ≈ 60%</td><td class="px-4 py-3 text-neutral-300">Desça para o Opus 5.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Perguntas de conhecimento em alto volume</td><td class="px-4 py-3 text-neutral-300">Haiku 4.5: 63% de acerto a 1/10 do custo do Opus 5 (92%)</td><td class="px-4 py-3 text-neutral-300">Haiku, se você consegue checar a saída e o erro é barato.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Loop longo com agentes</td><td class="px-4 py-3 text-neutral-300">Modelos pequenos perdem na cauda de tarefas difíceis</td><td class="px-4 py-3 text-neutral-300">Não desça; a economia se perde em falhas.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Pesquisa profunda</td><td class="px-4 py-3 text-neutral-300">Fable 5 em low venceu Sonnet 5 por 10% menos</td><td class="px-4 py-3 text-neutral-300">Fable em esforço baixo.</td></tr></tbody>
+          <thead class="bg-dark-800 text-purple-400"><tr><th class="px-4 py-3 font-semibold">Situaçêo</th><th class="px-4 py-3 font-semibold">Mediçêo publicada</th><th class="px-4 py-3 font-semibold">Decisêo</th></tr></thead>
+          <tbody class="divide-y divide-dark-600"><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Código onde ambos acertam quase tudo</td><td class="px-4 py-3 text-neutral-300">Opus 5: 91,7% · Fable 5: 91,3% · custo do Opus ≈ 60%</td><td class="px-4 py-3 text-neutral-300">Desça para o Opus 5.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Perguntas de conhecimento em alto volume</td><td class="px-4 py-3 text-neutral-300">Haiku 4.5: 63% de acerto a 1/10 do custo do Opus 5 (92%)</td><td class="px-4 py-3 text-neutral-300">Haiku, se você consegue checar a saída e o erro é barato.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Loop longo com agentes</td><td class="px-4 py-3 text-neutral-300">Modelos pequenos perdem na cauda de tarefas difíceis</td><td class="px-4 py-3 text-neutral-300">Nêo desça; a economia se perde em falhas.</td></tr><tr class="bg-dark-900/40"><td class="px-4 py-3 font-semibold text-neutral-100">Pesquisa profunda</td><td class="px-4 py-3 text-neutral-300">Fable 5 em low venceu Sonnet 5 por 10% menos</td><td class="px-4 py-3 text-neutral-300">Fable em esforço baixo.</td></tr></tbody>
         </table>
       </div>
 
       <figure class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-        <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Quando descer de modelo e quando não descer"><defs>
+        <svg viewBox="0 0 800 266" class="w-full h-auto" role="img" aria-label="Quando descer de modelo e quando nêo descer"><defs>
     <linearGradient id="s27-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
     <filter id="s27-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <pattern id="s27-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#a855f7" opacity="0.14"/></pattern>
@@ -653,16 +653,16 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
       <rect x="40" y="30" width="330" height="206" rx="16" fill="#3b0764" stroke="#a855f7" stroke-width="2" opacity="0.95"/>
       <text x="205" y="62" text-anchor="middle" fill="#c084fc" font-family="Inter,sans-serif" font-size="15" font-weight="800">Desça de modelo</text>
       <g class="wf-a"><circle cx="66" cy="96" r="4" fill="#c084fc"/><text x="80" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Ambos saturam (acertam quase tudo)</text></g><g class="wf-a"><circle cx="66" cy="130" r="4" fill="#c084fc"/><text x="80" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Alto volume, saída checável</text></g><g class="wf-a"><circle cx="66" cy="164" r="4" fill="#c084fc"/><text x="80" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Erro é barato de corrigir</text></g><g class="wf-a"><circle cx="66" cy="198" r="4" fill="#c084fc"/><text x="80" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Você mediu e a curva é plana</text></g><rect x="430" y="30" width="330" height="206" rx="16" fill="#0e1b26" stroke="#38bdf8" stroke-width="2" opacity="0.95"/>
-      <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">Não desça</text>
-      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Loop longo com muitas etapas</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Cauda de tarefas difíceis pesa</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Erro é caro ou invisível</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Você ainda não mediu</text></g>
+      <text x="595" y="62" text-anchor="middle" fill="#38bdf8" font-family="Inter,sans-serif" font-size="15" font-weight="800">Nêo desça</text>
+      <g class="wf-a"><circle cx="456" cy="96" r="4" fill="#38bdf8"/><text x="470" y="100" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Loop longo com muitas etapas</text></g><g class="wf-a"><circle cx="456" cy="130" r="4" fill="#38bdf8"/><text x="470" y="134" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Cauda de tarefas difíceis pesa</text></g><g class="wf-a"><circle cx="456" cy="164" r="4" fill="#38bdf8"/><text x="470" y="168" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Erro é caro ou invisível</text></g><g class="wf-a"><circle cx="456" cy="198" r="4" fill="#38bdf8"/><text x="470" y="202" fill="#e5e7eb" font-family="Inter,sans-serif" font-size="12">Você ainda nêo mediu</text></g>
       <line x1="385" y1="121" x2="415" y2="121" stroke="#9ca3af" stroke-width="1.5"/><line x1="385" y1="129" x2="415" y2="129" stroke="#9ca3af" stroke-width="1.5"/>
       <text x="400" y="149" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="9.5">a régua é a tarefa</text></svg>
-        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-purple-400">O que olhar:</strong> Descer de modelo é a última alavanca, não a primeira. Antes dela vêm cache e esforço (módulo 3.2). E a decisão é sempre por tarefa, com medição.</figcaption>
+        <figcaption class="text-xs text-neutral-400 mt-3 px-1"><strong class="text-purple-400">O que olhar:</strong> Descer de modelo é a última alavanca, nêo a primeira. Antes dela vêm cache e esforço (módulo 3.2). E a decisêo é sempre por tarefa, com mediçêo.</figcaption>
       </figure>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Recomendação padrão da própria Anthropic</h3>
-        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p17">Para a maioria dos fluxos com agentes, comece com o Opus 5. Reserve o Fable 5.1 para o trabalho de raciocínio mais exigente e de horizonte longo. E lembre: em Claude Code e API, o modelo padrão sugerido para novos projetos é o Opus 5, não o Fable.</p>
+        <h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Recomendaçêo padrêo da própria Anthropic</h3>
+        <p class="text-neutral-300" data-ARCKHÉ-block="m3-1-p17">Para a maioria dos fluxos com agentes, comece com o Opus 5. Reserve o Fable 5.1 para o trabalho de raciocínio mais exigente e de horizonte longo. E lembre: em Claude Code e API, o modelo padrêo sugerido para novos projetos é o Opus 5, nêo o Fable.</p>
       </div>
       
       <button type="button" data-ARCKHÉ-read-toggle class="mt-4 px-4 py-2 rounded-lg text-sm font-medium bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 transition-colors flex items-center space-x-2 justify-start">
@@ -677,13 +677,13 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
     
       <div class="bg-dark-800 rounded-2xl border border-purple-500/30 p-6 mb-6">
         <h3 class="text-lg font-semibold text-purple-400 mb-1 flex items-center"><span class="mr-2">🧪</span> Teste rápido do módulo</h3>
-        <p class="text-sm text-neutral-400 mb-5">Três perguntas. Clique numa opção para ver a resposta.</p>
+        <p class="text-sm text-neutral-400 mb-5">Três perguntas. Clique numa opçêo para ver a resposta.</p>
         <div class="space-y-5">
         
           <div class="qz" data-q="1">
-            <p class="font-semibold text-neutral-100 mb-3">1. Por token, o Fable 5.1 custa quanto em relação ao Opus 5?</p>
+            <p class="font-semibold text-neutral-100 mb-3">1. Por token, o Fable 5.1 custa quanto em relaçêo ao Opus 5?</p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">O mesmo.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">O dobro (10/50 contra 5/25 por milhão).</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">A metade.</button>
+              <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">O mesmo.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">O dobro (10/50 contra 5/25 por milhêo).</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">A metade.</button>
             </div>
             <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="Fable: $10 entrada / $50 saída. Opus 5: $5 / $25. A premissa honesta da trilha é que, por token, Fable é mais caro."></p>
           </div>
@@ -699,7 +699,7 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
               <button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Pesquisa profunda.</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="1">Código onde ambos já acertam quase tudo (Opus 5 a 60% do custo do Fable 5).</button><button type="button" class="qz-opt text-left px-4 py-3 rounded-lg border border-dark-600 bg-dark-900/40 text-sm text-neutral-300 hover:border-purple-500/40 transition-colors" data-ok="0">Loop longo com agentes.</button>
             </div>
-            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="Quando a tarefa satura, o modelo caro não tem onde ganhar. Descer de modelo é a decisão certa ali."></p>
+            <p class="qz-fb mt-3 text-sm text-neutral-300" data-text="Quando a tarefa satura, o modelo caro nêo tem onde ganhar. Descer de modelo é a decisêo certa ali."></p>
           </div>
         </div>
       </div>
@@ -709,7 +709,7 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
       <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
         <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">📋</span> Resumo do módulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Tabela de preços</strong><span class="text-neutral-400"> - Fable 10/50, Opus 5 5/25, Sonnet 5 2/10, Haiku 1/5 dólares por milhão. Por token, Fable é o mais caro.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Custo por tarefa</strong><span class="text-neutral-400"> - tokens × preço × tentativas, mais retrabalho. A tabela não prevê o ranking.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Fable em low venceu Sonnet</strong><span class="text-neutral-400"> - em pesquisa profunda, por 10% menos por tarefa. Medium igualou o padrão a 70–85% do custo.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Economia do assinante</strong><span class="text-neutral-400"> - memória e busca em conversas cortam turnos de re-explicação. Meça por uma semana.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Exercício de três tarefas</strong><span class="text-neutral-400"> - estime tokens e tentativas em dois modelos; decida por tarefa.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Onde o barato ganha</strong><span class="text-neutral-400"> - código saturado (Opus a 60%), alto volume checável (Haiku). Não em loop longo.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Tabela de preços</strong><span class="text-neutral-400"> - Fable 10/50, Opus 5 5/25, Sonnet 5 2/10, Haiku 1/5 dólares por milhêo. Por token, Fable é o mais caro.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Custo por tarefa</strong><span class="text-neutral-400"> - tokens × preço × tentativas, mais retrabalho. A tabela nêo prevê o ranking.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Fable em low venceu Sonnet</strong><span class="text-neutral-400"> - em pesquisa profunda, por 10% menos por tarefa. Medium igualou o padrêo a 70–85% do custo.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Economia do assinante</strong><span class="text-neutral-400"> - memória e busca em conversas cortam turnos de re-explicaçêo. Meça por uma semana.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Exercício de três tarefas</strong><span class="text-neutral-400"> - estime tokens e tentativas em dois modelos; decida por tarefa.</span></div></div><div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">&#10003;</span><div><strong class="text-white">Onde o barato ganha</strong><span class="text-neutral-400"> - código saturado (Opus a 60%), alto volume checável (Haiku). Nêo em loop longo.</span></div></div>
         </div>
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Próximo módulo:</h3><p class="text-neutral-300">3.2 - Esforço, falhas e a cauda</p></div>
         <div class="flex flex-col sm:flex-row gap-4">
@@ -727,7 +727,7 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
         <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> -
         <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 dark:text-slate-300">PRO</a></p>
       <p class="text-xs">Fonte do prompt de sistema: <a href="https://platform.claude.com/docs/en/release-notes/system-prompts/claude-fable-5-1" target="_blank" class="text-sky-400 hover:text-sky-300">prompt oficial publicado pela Anthropic</a> ·
-        <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC" target="_blank" class="text-sky-400 hover:text-sky-300">extração pública do runtime completo</a> (não autenticada; congelada em 02/09/2026).</p>
+        <a href="https://github.com/elder-plinius/CL4R1T4S/tree/main/ANTHROPIC" target="_blank" class="text-sky-400 hover:text-sky-300">extraçêo pública do runtime completo</a> (nêo autenticada; congelada em 02/09/2026).</p>
     </div>
   </footer>
 
@@ -769,7 +769,7 @@ Vencedor nesta tarefa: &lt;B, por 2,5x&gt;   Observação: &lt;B ainda ganha mes
       const ok = opt.getAttribute('data-ok') === '1';
       qz.querySelectorAll('.qz-opt').forEach(o => { o.setAttribute('data-state', o.getAttribute('data-ok') === '1' ? 'ok' : (o === opt ? 'no' : '')); o.disabled = true; });
       qz.setAttribute('data-answered', ok ? 'ok' : 'no');
-      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? '✓ Certo. ' : '✗ Não é essa. ') + (fb.getAttribute('data-text') || '');
+      const fb = qz.querySelector('.qz-fb'); if (fb) fb.textContent = (ok ? '✓ Certo. ' : '✗ Nêo é essa. ') + (fb.getAttribute('data-text') || '');
     });
     // Copiar código
     document.addEventListener('click', (e) => {
